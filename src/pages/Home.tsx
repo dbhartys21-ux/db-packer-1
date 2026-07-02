@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Target, Eye, ArrowLeft, ArrowRight, Quote } from 'lucide-react';
+import { ChevronRight, Target, Eye, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy } from 'lucide-react';
 import { products } from '../data/products';
 import SubHeader from '../components/SubHeader';
 import './Home.css';
@@ -17,6 +17,7 @@ const Home = () => {
   const carouselRef = useRef<HTMLDivElement>(null);
   const processRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,10 +63,24 @@ const Home = () => {
   ];
 
   const testimonials = [
-    { quote: "DBPack completely transformed our logistics. Their corrugated boxes are the strongest we've used.", name: "John Doe", company: "RetailPlus" }, // {/* TODO: replace with real testimonial */}
-    { quote: "Outstanding service and 98% on-time delivery. They truly act as a partner in our supply chain.", name: "Sarah Jenkins", company: "TechCorp Logistics" }, // {/* TODO: replace with real testimonial */}
-    { quote: "The custom stretch films they provide helped us reduce damage during transit by over 40%.", name: "Mike Alvarez", company: "GlobalShipping Co." }, // {/* TODO: replace with real testimonial */}
-    { quote: "Reliable, high-quality, and cost-effective. We couldn't ask for a better packaging partner.", name: "David Chen", company: "FreshFoods Inc." } // {/* TODO: replace with real testimonial */}
+    { quote: "DBPack completely transformed our logistics. Their corrugated boxes are the strongest we've used.", name: "John Doe", company: "RetailPlus" }, 
+    { quote: "Outstanding service and 98% on-time delivery. They truly act as a partner in our supply chain.", name: "Sarah Jenkins", company: "TechCorp Logistics" }, 
+    { quote: "The custom stretch films they provide helped us reduce damage during transit by over 40%.", name: "Mike Alvarez", company: "GlobalShipping Co." }, 
+    { quote: "Reliable, high-quality, and cost-effective. We couldn't ask for a better packaging partner.", name: "David Chen", company: "FreshFoods Inc." } 
+  ];
+
+  const industries = [
+    { name: "E-commerce & Retail", img: "/assets/boxes.png" },
+    { name: "Food & Beverage", img: "/assets/clean-warehouse.png" },
+    { name: "Industrial Manufacturing", img: "/assets/stretch-film.png" },
+    { name: "Logistics & Healthcare", img: "/assets/bubble-wrap.png" }
+  ];
+
+  const faqs = [
+    { q: "What is your minimum order quantity (MOQ)?", a: "Our MOQ depends on the specific product category, but we generally cater to both mid-sized and enterprise volumes. Contact us for a precise quote based on your needs." },
+    { q: "Do you offer custom branding and printing?", a: "Yes! We provide full customization services, including custom dimensions, high-quality printing, and branding for all our corrugated boxes and tapes." },
+    { q: "How fast is your typical delivery time?", a: "Standard products are typically dispatched within 24-48 hours. Custom printed orders generally take 7-10 business days." },
+    { q: "Are your packaging materials eco-friendly?", a: "We prioritize sustainability. Many of our corrugated solutions are made from recycled materials and are 100% recyclable." }
   ];
 
   return (
@@ -133,7 +148,27 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. About Section */}
+      {/* 3. Industries We Serve */}
+      <section className="industries-section section bg-surface-1">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h4 className="section-subtitle">INDUSTRIES WE SERVE</h4>
+            <h2>Packaging for Every Sector</h2>
+          </div>
+          <div className="industries-grid">
+            {industries.map((ind, i) => (
+              <div key={i} className="industry-card">
+                <img src={ind.img} alt={ind.name} className="industry-img" />
+                <div className="industry-overlay">
+                  <h4>{ind.name}</h4>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. About Section */}
       <section className="about-snippet section bg-surface-1">
         <div className="container about-grid">
           <div className="about-text">
@@ -222,7 +257,39 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. Process / How it works */}
+      {/* 5. Capabilities / Quality */}
+      <section className="capabilities-section section bg-primary dark-theme">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h4 className="section-subtitle" style={{ color: 'var(--surface-2)' }}>OUR CAPABILITIES</h4>
+            <h2 style={{ color: 'var(--white)' }}>Scale & Quality You Can Trust</h2>
+          </div>
+          <div className="capabilities-grid">
+            <div className="capability-card">
+              <Factory size={40} className="cap-icon" />
+              <h3>50,000+</h3>
+              <p>Sq.Ft Manufacturing Facility</p>
+            </div>
+            <div className="capability-card">
+              <ShieldCheck size={40} className="cap-icon" />
+              <h3>ISO 9001</h3>
+              <p>Certified for Quality Management</p>
+            </div>
+            <div className="capability-card">
+              <Trophy size={40} className="cap-icon" />
+              <h3>10M+</h3>
+              <p>Units Produced Monthly</p>
+            </div>
+            <div className="capability-card">
+              <CheckCircle size={40} className="cap-icon" />
+              <h3>100%</h3>
+              <p>Quality Inspected</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. Process / How it works */}
       <section className="process-section section bg-surface-2" ref={processRef}>
         <div className="container">
           <h4 className="section-subtitle">HOW IT WORKS</h4>
@@ -268,7 +335,34 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 8. CTA Section */}
+      {/* 8. FAQ Section */}
+      <section className="faq-section section bg-surface-1">
+        <div className="container">
+          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+            <h4 className="section-subtitle">FAQ</h4>
+            <h2>Common Questions</h2>
+          </div>
+          <div className="faq-list">
+            {faqs.map((faq, i) => (
+              <div 
+                key={i} 
+                className={`faq-item ${openFaq === i ? 'open' : ''}`}
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+              >
+                <div className="faq-question">
+                  <h5>{faq.q}</h5>
+                  {openFaq === i ? <Minus size={20} className="faq-icon" /> : <Plus size={20} className="faq-icon" />}
+                </div>
+                <div className="faq-answer">
+                  <p>{faq.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 9. CTA Section */}
       <section className="cta-section">
         <div className="container cta-content">
           <div className="cta-text">

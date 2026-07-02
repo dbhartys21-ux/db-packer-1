@@ -755,6 +755,147 @@
   color: var(--text-light);
 }
 
+/* Industries We Serve */
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.industry-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 200px;
+  cursor: pointer;
+}
+
+.industry-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.industry-card:hover .industry-img {
+  transform: scale(1.1);
+}
+
+.industry-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(22, 22, 37, 0.6); /* Shiprocket text color overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.industry-overlay h4 {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 10px;
+}
+
+.industry-card:hover .industry-overlay {
+  background: rgba(45, 45, 191, 0.8); /* Shiprocket primary color */
+}
+
+/* Capabilities Section */
+.capabilities-section.dark-theme {
+  background: var(--text-color); /* Dark grey/blue background */
+  color: var(--white);
+  padding: 60px 0;
+}
+
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.capability-card {
+  padding: 20px;
+}
+
+.cap-icon {
+  color: var(--surface-2); /* Neon/bright accent */
+  margin-bottom: 15px;
+}
+
+.capability-card h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.capability-card p {
+  color: var(--surface-1);
+  font-size: 0.95rem;
+}
+
+/* FAQ Section */
+.faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background: var(--white);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  border-left: 4px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.faq-item.open {
+  border-left-color: var(--primary-color);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.faq-question h5 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--text-color);
+}
+
+.faq-icon {
+  color: var(--primary-color);
+}
+
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+  padding: 0 20px 20px 20px;
+}
+
+.faq-answer p {
+  margin: 0;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
 /* Responsive Enhancements */
 .products-section-header {
   display: flex;
