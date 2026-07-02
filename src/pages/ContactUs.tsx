@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail } from 'lucide-react';
+import { SITE_CONFIG } from '../config/site';
 
 const ContactUs = () => {
   return (
@@ -19,9 +20,9 @@ const ContactUs = () => {
               </div>
               <h4>Visit Us</h4>
               <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '0' }}>
-                123 Packaging Street,<br />
-                Industrial Area,<br />
-                Your City - 123456
+                {SITE_CONFIG.contact.address.map((line, i) => (
+                  <span key={i}>{line}<br /></span>
+                ))}
               </p>
             </div>
             
@@ -31,8 +32,7 @@ const ContactUs = () => {
               </div>
               <h4>Call Us</h4>
               <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '0' }}>
-                +91 98765 43210<br />
-                +91 98765 43211
+                {SITE_CONFIG.contact.phone}
               </p>
             </div>
             
@@ -42,8 +42,7 @@ const ContactUs = () => {
               </div>
               <h4>Email Us</h4>
               <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '0' }}>
-                info@dbpack.com<br />
-                sales@dbpack.com
+                {SITE_CONFIG.contact.email}
               </p>
             </div>
           </div>

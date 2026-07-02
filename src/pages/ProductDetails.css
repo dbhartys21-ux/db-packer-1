@@ -1,0 +1,232 @@
+.product-details-page {
+  padding-top: 40px;
+  padding-bottom: 80px;
+  background-color: var(--white);
+}
+
+.breadcrumb {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.breadcrumb a {
+  color: var(--primary-color);
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb-separator {
+  margin: 0 10px;
+  color: var(--border-color);
+}
+
+/* Top Section: Gallery + Info + CTA */
+.product-top-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+@media (min-width: 992px) {
+  .product-top-section {
+    grid-template-columns: 45% 30% 25%;
+    gap: 2%;
+  }
+}
+
+/* Image Gallery */
+.product-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.main-image-container {
+  background-color: #f1f5f9;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-image-container img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.thumbnail-list {
+  display: flex;
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #f1f5f9;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thumbnail.active, .thumbnail:hover {
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 5px rgba(43, 112, 212, 0.3);
+}
+
+.thumbnail img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Product Info */
+.product-info-column h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.product-category {
+  display: inline-block;
+  background-color: rgba(15, 61, 129, 0.1);
+  color: var(--primary-color);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.product-short-desc {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.product-features {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.product-features li {
+  list-style-type: disc;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+/* Call to Action Box (Like Amazon Buy Box) */
+.product-cta-box {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--white);
+  height: fit-content;
+}
+
+.cta-price-mock {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #b12704; /* Amazon-ish red */
+  margin-bottom: 10px;
+}
+
+.cta-stock {
+  color: #007600; /* Amazon-ish green */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.cta-box-desc {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.btn-quote-full {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.cta-benefits {
+  list-style: none;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.cta-benefits li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cta-benefits svg {
+  margin-right: 8px;
+  color: var(--secondary-color);
+}
+
+/* Bottom Section: Details & Specs */
+.product-bottom-section {
+  border-top: 1px solid var(--border-color);
+  padding-top: 40px;
+}
+
+.product-bottom-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-color);
+  display: inline-block;
+}
+
+.product-full-desc {
+  max-width: 800px;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.specs-table {
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+}
+
+.specs-table th, .specs-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+.specs-table th {
+  background-color: #f8fafc;
+  width: 35%;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.specs-table td {
+  color: var(--text-color);
+}
+
+.specs-table tr:hover {
+  background-color: #f8fafc;
+}

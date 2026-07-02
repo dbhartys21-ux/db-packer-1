@@ -1,6 +1,29 @@
 import { Link } from 'react-router-dom';
 import { Package, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { SITE_CONFIG } from '../config/site';
 import './Footer.css';
+
+const FacebookIcon = ({ size = 20 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+  </svg>
+);
+
+const InstagramIcon = ({ size = 20 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+  </svg>
+);
+
+const LinkedinIcon = ({ size = 20 }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+    <rect x="2" y="9" width="4" height="12"></rect>
+    <circle cx="4" cy="4" r="2"></circle>
+  </svg>
+);
 
 const Footer = () => {
   return (
@@ -17,9 +40,15 @@ const Footer = () => {
             DBPack provides high-quality, reliable, and sustainable packaging solutions tailored to businesses of all sizes. We are committed to protecting what matters most—your products.
           </p>
           <div className="social-links">
-            <a href="#" className="social-icon">F</a>
-            <a href="#" className="social-icon">In</a>
-            <a href="#" className="social-icon">Ig</a>
+            <a href={SITE_CONFIG.social.facebook} className="social-icon" aria-label="Facebook">
+              <FacebookIcon size={20} />
+            </a>
+            <a href={SITE_CONFIG.social.linkedin} className="social-icon" aria-label="LinkedIn">
+              <LinkedinIcon size={20} />
+            </a>
+            <a href={SITE_CONFIG.social.instagram} className="social-icon" aria-label="Instagram">
+              <InstagramIcon size={20} />
+            </a>
           </div>
         </div>
 
@@ -54,19 +83,23 @@ const Footer = () => {
           <ul className="footer-contact">
             <li>
               <MapPin size={18} className="contact-icon" />
-              <span>123 Packaging Street,<br/>Industrial Area,<br/>Your City - 123456</span>
+              <span>
+                {SITE_CONFIG.contact.address.map((line, i) => (
+                  <span key={i}>{line}<br/></span>
+                ))}
+              </span>
             </li>
             <li>
               <Phone size={18} className="contact-icon" />
-              <span>+91 98765 43210</span>
+              <span>{SITE_CONFIG.contact.phone}</span>
             </li>
             <li>
               <Mail size={18} className="contact-icon" />
-              <span>info@dbpack.com</span>
+              <span>{SITE_CONFIG.contact.email}</span>
             </li>
             <li>
               <Clock size={18} className="contact-icon" />
-              <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+              <span>{SITE_CONFIG.contact.hours}</span>
             </li>
           </ul>
         </div>

@@ -1,16 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, ShieldCheck, Sliders, Truck, Users, Leaf, Target, Eye, BadgeCheck, Cpu, Briefcase, Tag, Globe2 } from 'lucide-react';
+import { ChevronRight, ShieldCheck, Sliders, Truck, Users, Leaf, Target, Eye, BadgeCheck, Cpu, Briefcase, Tag, Globe2, ArrowLeft, ArrowRight } from 'lucide-react';
+import { products } from '../data/products';
 import './Home.css';
 
 const Home = () => {
   const [currentHeroIdx, setCurrentHeroIdx] = useState(0);
   const heroImages = [
-    "/assets/hero-image.png",
+    "/assets/clean-warehouse.png",
     "/assets/boxes.png",
     "/assets/stretch-film.png",
     "/assets/bubble-wrap.png"
   ];
+
+  const carouselRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -19,21 +22,24 @@ const Home = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const scrollLeft = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: -320, behavior: 'smooth' });
+    }
+  };
+
+  const scrollRight = () => {
+    if (carouselRef.current) {
+      carouselRef.current.scrollBy({ left: 320, behavior: 'smooth' });
+    }
+  };
+
   const features = [
     { icon: <ShieldCheck size={32} />, title: "Premium Quality", desc: "Top-grade materials for maximum protection" },
     { icon: <Sliders size={32} />, title: "Customized Solutions", desc: "Tailored packaging as per your needs" },
     { icon: <Truck size={32} />, title: "Timely Delivery", desc: "On-time delivery you can rely on" },
     { icon: <Users size={32} />, title: "Customer Satisfaction", desc: "Committed to exceeding customer expectations" },
     { icon: <Leaf size={32} />, title: "Sustainable Practices", desc: "Eco-friendly materials for a better tomorrow" }
-  ];
-
-  const products = [
-    { title: "Corrugated Boxes", desc: "Strong, durable & customizable boxes for safe packaging.", img: "/assets/boxes.png" },
-    { title: "Stretch Film Rolls", desc: "High-performance stretch wraps for secure bundling.", img: "/assets/stretch-film.png" },
-    { title: "Bubble Wrap Rolls", desc: "Protective cushioning for fragile & delicate items.", img: "/assets/bubble-wrap.png" },
-    { title: "Packing Tape", desc: "High-adhesion tapes for secure sealing.", img: "/assets/tape.png" },
-    { title: "PP Strapping Roll", desc: "Heavy-duty strapping for load securement.", img: "/assets/strapping.png" },
-    { title: "Zip Lock Pouches", desc: "Durable pouches for safe storage & packaging.", img: "/assets/pouches.png" }
   ];
 
   const whyChoose = [
@@ -91,9 +97,7 @@ const Home = () => {
       <section className="about-snippet section">
         <div className="container about-grid">
           <div className="about-image-wrapper">
-            <div className="about-mock-image">
-              <span>DBPack</span> Facility
-            </div>
+            <img src="https://placehold.co/600x400/0f3d81/ffffff?text=Facility+Photo+Coming+Soon" alt="DBPack Facility" style={{ width: '100%', height: '400px', objectFit: 'cover', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-lg)' }} />
           </div>
           <div className="about-text">
             <h4 className="section-subtitle">ABOUT US</h4>
@@ -131,22 +135,31 @@ const Home = () => {
             </div>
             <Link to="/products" className="btn btn-secondary">VIEW ALL PRODUCTS</Link>
           </div>
-          <div className="products-grid">
-            {products.map((p, i) => (
-              <div key={i} className="product-card">
-                <div className="product-img-mock" style={{ overflow: 'hidden', padding: '0' }}>
-                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
-                </div>
-                <div className="product-info">
-                  <h4>{p.title}</h4>
-                  <p>{p.desc}</p>
-                </div>
-              </div>
-            ))}
+          <div className="carousel-wrapper" style={{ position: 'relative' }}>
+            <button className="carousel-btn left" onClick={scrollLeft} aria-label="Previous Products">
+              <ArrowLeft size={20} />
+            </button>
+            <div className="products-grid" ref={carouselRef}>
+              {products.map((p, i) => (
+                <Link to={`/product/${p.id}`} key={i} className="product-card" style={{ display: 'block', textDecoration: 'none' }}>
+                  <div className="product-img-mock" style={{ overflow: 'hidden', padding: '0' }}>
+                    <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+                  </div>
+                  <div className="product-info">
+                    <h4>{p.title}</h4>
+                    <p>{p.desc}</p>
+                    <span className="view-details" style={{ display: 'inline-block', marginTop: '15px', color: 'var(--secondary-color)', fontWeight: '600', fontSize: '0.9rem' }}>View details →</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <button className="carousel-btn right" onClick={scrollRight} aria-label="Next Products">
+              <ArrowRight size={20} />
+            </button>
           </div>
           <div className="carousel-dots">
             <span className="dot active"></span>
-            <span className="dot"></span>
+            <span className="dot active"></span>
             <span className="dot"></span>
             <span className="dot"></span>
           </div>

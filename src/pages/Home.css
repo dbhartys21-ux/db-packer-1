@@ -114,33 +114,7 @@
   align-items: center;
 }
 
-.about-mock-image {
-  background: linear-gradient(45deg, #0f3d81 0%, #2b70d4 100%);
-  border-radius: var(--radius);
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 2rem;
-  font-weight: 700;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-  overflow: hidden;
-}
 
-.about-mock-image::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: repeating-linear-gradient(
-    45deg,
-    rgba(255, 255, 255, 0.05),
-    rgba(255, 255, 255, 0.05) 10px,
-    transparent 10px,
-    transparent 20px
-  );
-}
 
 .section-subtitle {
   color: var(--secondary-color);
@@ -190,12 +164,24 @@
 }
 
 .products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   gap: 20px;
+  padding: 10px 5px 30px 5px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.products-grid::-webkit-scrollbar {
+  display: none;
 }
 
 .product-card {
+  min-width: 300px;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
   background-color: var(--white);
   border-radius: var(--radius);
   border: 1px solid var(--border-color);
@@ -204,8 +190,9 @@
 }
 
 .product-card:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-8px);
+  border-color: var(--secondary-color);
 }
 
 .product-img-mock {
@@ -237,20 +224,60 @@
 .carousel-dots {
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
+  gap: 12px;
+  margin-top: 15px;
 }
 
 .dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background-color: var(--border-color);
+  background-color: #cbd5e1;
   cursor: pointer;
+  transition: var(--transition);
 }
 
-.dot.active {
+.dot.active, .dot:hover {
   background-color: var(--primary-color);
+  transform: scale(1.2);
+}
+
+.carousel-btn {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  box-shadow: var(--shadow-sm);
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.carousel-btn:hover {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.carousel-btn.left {
+  left: -22px;
+}
+
+.carousel-btn.right {
+  right: -22px;
+}
+
+@media (max-width: 1200px) {
+  .carousel-btn.left { left: 0; }
+  .carousel-btn.right { right: 0; }
 }
 
 /* CTA Section */
@@ -297,6 +324,7 @@
 
 /* Why Choose Us */
 .why-choose-section {
+  padding-top: 40px;
   padding-bottom: 80px;
 }
 
@@ -315,6 +343,13 @@
 .wc-icon {
   color: var(--primary-color);
   flex-shrink: 0;
+  background-color: rgba(15, 61, 129, 0.1);
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .why-choose-item h5 {
