@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Target, Eye, BadgeCheck, Cpu, Briefcase, Tag, Globe2, ArrowLeft, ArrowRight, Quote } from 'lucide-react';
+import { ChevronRight, Target, Eye, ArrowLeft, ArrowRight, Quote } from 'lucide-react';
 import { products } from '../data/products';
 import SubHeader from '../components/SubHeader';
 import './Home.css';
@@ -53,16 +53,6 @@ const Home = () => {
       carouselRef.current.scrollBy({ left: 320, behavior: 'smooth' });
     }
   };
-
-  const whyChoose = [
-    { icon: <BadgeCheck size={32} />, title: "High Quality Materials", desc: "We use premium raw materials for strength and durability." },
-    { icon: <Cpu size={32} />, title: "Advanced Technology", desc: "Modern machines ensure consistent quality and precision." },
-    { icon: <Briefcase size={32} />, title: "Experienced Team", desc: "Skilled professionals committed to delivering the best." },
-    { icon: <Tag size={32} />, title: "Competitive Pricing", desc: "Best quality packaging solutions at fair and competitive rates." },
-    { icon: <Globe2 size={32} />, title: "Wide Industry Reach", desc: "Serving a diverse range of industries across the country." }
-  ];
-
-
 
   const processSteps = [
     { num: 1, title: "Request a Quote", desc: "Tell us your requirements and volume." },
@@ -250,27 +240,6 @@ const Home = () => {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Why Choose Us */}
-      <section className="why-choose-section section dark-premium-bg">
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '20px' }}>
-            <h4 className="section-subtitle">WHY CHOOSE DBPACK?</h4>
-            <h2>The DBPack Advantage</h2>
-          </div>
-          <div className="why-choose-grid">
-            {whyChoose.map((w, i) => (
-              <div key={i} className="why-choose-item">
-                <div className="wc-icon">{w.icon}</div>
-                <div>
-                  <h5>{w.title}</h5>
-                  <p>{w.desc}</p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
