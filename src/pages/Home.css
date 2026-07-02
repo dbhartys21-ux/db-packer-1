@@ -647,7 +647,7 @@
 
 .why-choose-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
   margin-top: 60px;
 }
@@ -703,6 +703,12 @@
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .why-choose-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
