@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #0f3d81; /* DBPack deep blue */
-  --secondary-color: #2b70d4; /* Lighter blue for hover/accents */
-  --bg-color: #f8fafc;
-  --surface-1: #f1f5f9; /* Light gray for alternating sections */
-  --surface-2: #e0e7ff; /* Light brand-tinted blue */
-  --text-color: #1e293b;
+  --primary-color: #2d2dbf; /* Shiprocket blue/purple */
+  --secondary-color: #1a1a9e; /* Slightly darker for hover/accents */
+  --bg-color: #fdfdfd;
+  --surface-1: #f1f5f9; 
+  --surface-2: #e0e7ff; 
+  --text-color: #161625;
   --text-light: #64748b;
   --white: #ffffff;
   --border-color: #e2e8f0;
