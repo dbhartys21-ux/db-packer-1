@@ -4,85 +4,68 @@
 
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, #e0eaf5 0%, #f4f8fc 100%);
-  padding: 80px 0;
   position: relative;
   overflow: hidden;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.hero-bg-slide {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1.5s ease-in-out;
+  z-index: 0;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background-color: rgba(12, 43, 92, 0.75); /* Deep DBPack blue overlay */
+  z-index: 1;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 2;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
 }
 
 .hero-text {
-  flex: 1;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 .hero-text h1 {
-  font-size: 3.5rem;
-  color: var(--primary-color);
+  font-size: 4rem;
+  color: #ffffff;
   margin-bottom: 20px;
 }
 
 .hero-text p {
-  font-size: 1.1rem;
-  color: var(--text-color);
+  font-size: 1.2rem;
+  color: #e2e8f0;
   margin-bottom: 30px;
 }
 
 .hero-btn {
-  padding: 12px 30px;
+  padding: 14px 35px;
   font-size: 1.1rem;
+  background-color: var(--secondary-color);
+  border: none;
 }
 
-.hero-image-placeholder {
-  flex: 1;
-  position: relative;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero-btn:hover {
+  background-color: #ffffff;
+  color: var(--primary-color);
 }
 
-.mock-box {
-  background-color: #d2a679;
-  border: 2px solid #b38050;
-  border-radius: 4px;
-  position: absolute;
-  box-shadow: var(--shadow-lg);
-}
 
-.mock-box-1 {
-  width: 150px;
-  height: 120px;
-  bottom: 80px;
-  right: 180px;
-  z-index: 2;
-}
-
-.mock-box-2 {
-  width: 200px;
-  height: 160px;
-  bottom: 40px;
-  right: 40px;
-  z-index: 1;
-}
-
-.mock-roll {
-  width: 100px;
-  height: 250px;
-  background-color: #f0f0f0;
-  border: 2px solid #ddd;
-  border-radius: 50px;
-  position: absolute;
-  top: 50px;
-  right: 120px;
-  z-index: 0;
-}
 
 /* Features */
 .features-section {

@@ -1,5 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Package, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import logoImg from '../assets/without-bg.png';
 import { useState } from 'react';
 import './Navbar.css';
 
@@ -23,11 +24,7 @@ const Navbar = () => {
     <header className="navbar-container">
       <div className="container navbar-content">
         <Link to="/" className="navbar-logo">
-          <Package size={32} color="#0f3d81" />
-          <div className="logo-text">
-            <span className="logo-title">DBPack</span>
-            <span className="logo-subtitle">Excellence in Packaging Solutions</span>
-          </div>
+          <img src={logoImg} alt="DBPack Logo" style={{ height: '65px', objectFit: 'contain' }} />
         </Link>
 
         {/* Desktop Nav */}

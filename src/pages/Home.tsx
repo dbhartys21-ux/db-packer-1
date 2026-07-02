@@ -1,8 +1,24 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ShieldCheck, Sliders, Truck, Users, Leaf, Target, Eye, BadgeCheck, Cpu, Briefcase, Tag, Globe2 } from 'lucide-react';
 import './Home.css';
 
 const Home = () => {
+  const [currentHeroIdx, setCurrentHeroIdx] = useState(0);
+  const heroImages = [
+    "/assets/hero-image.png",
+    "/assets/boxes.png",
+    "/assets/stretch-film.png",
+    "/assets/bubble-wrap.png"
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentHeroIdx((prev) => (prev + 1) % heroImages.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
+
   const features = [
     { icon: <ShieldCheck size={32} />, title: "Premium Quality", desc: "Top-grade materials for maximum protection" },
     { icon: <Sliders size={32} />, title: "Customized Solutions", desc: "Tailored packaging as per your needs" },
@@ -32,6 +48,19 @@ const Home = () => {
     <div className="home-page">
       {/* Hero Section */}
       <section className="hero-section">
+        {/* Full-width Background Slider */}
+        {heroImages.map((img, idx) => (
+          <div 
+            key={idx}
+            className="hero-bg-slide"
+            style={{ 
+              backgroundImage: `url(${img})`,
+              opacity: currentHeroIdx === idx ? 1 : 0
+            }}
+          />
+        ))}
+        <div className="hero-overlay"></div>
+
         <div className="container hero-content">
           <div className="hero-text animate-fade-in">
             <h1>SMART PACKAGING<br />STRONGER FUTURE</h1>
@@ -39,11 +68,6 @@ const Home = () => {
             <Link to="/quote" className="btn btn-primary hero-btn">
               REQUEST A QUOTE <ChevronRight size={18} style={{marginLeft: '5px'}}/>
             </Link>
-          </div>
-          <div className="hero-image-placeholder">
-            <div className="mock-box mock-box-1"></div>
-            <div className="mock-box mock-box-2"></div>
-            <div className="mock-roll"></div>
           </div>
         </div>
       </section>
