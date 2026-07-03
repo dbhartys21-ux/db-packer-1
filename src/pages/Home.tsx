@@ -23,9 +23,19 @@ const Home = () => {
     const handleScroll = () => {
       if (processRef.current) {
         const rect = processRef.current.getBoundingClientRect();
-        const start = window.innerHeight * 0.85;
-        const end = window.innerHeight * 0.35;
-        let progress = (start - rect.top) / (start - end);
+        let progress = 0;
+        
+        if (window.innerWidth <= 768) {
+          // Mobile: line fills vertically as user scrolls through the section
+          const triggerPoint = window.innerHeight * 0.6;
+          progress = (triggerPoint - rect.top) / (rect.height * 0.85);
+        } else {
+          // Desktop: line fills horizontally quickly as section enters viewport
+          const start = window.innerHeight * 0.85;
+          const end = window.innerHeight * 0.35;
+          progress = (start - rect.top) / (start - end);
+        }
+        
         progress = Math.max(0, Math.min(1, progress));
         setScrollProgress(progress);
       }
