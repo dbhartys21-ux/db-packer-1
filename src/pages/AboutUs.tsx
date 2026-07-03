@@ -40,7 +40,7 @@ const AboutUs = () => {
         <div className="container">
           <div className="grid grid-2" style={{ alignItems: 'center', gap: '40px', background: 'var(--white)', padding: '50px', borderRadius: 'var(--radius)', boxShadow: 'var(--shadow-md)' }}>
             <div style={{ borderRadius: 'var(--radius)', overflow: 'hidden', maxWidth: '400px', margin: '0 auto' }}>
-              <img src="/founder.png" alt="David Bradley, Founder" style={{ width: '100%', height: 'auto', display: 'block' }} />
+              <img src="/founder.png" alt="Kundan Tiwary, Founder" style={{ width: '100%', height: 'auto', display: 'block' }} />
             </div>
             <div>
               <h4 className="section-subtitle">LEADERSHIP</h4>
