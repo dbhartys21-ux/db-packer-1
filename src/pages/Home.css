@@ -1216,4 +1216,43 @@
   .testimonial-card:nth-child(4) {
     display: none !important;
   }
+
+  /* Compact CTA Banner */
+  .cta-section {
+    padding: 25px 0 !important;
+    margin: 20px 15px !important;
+  }
+  
+  .cta-content {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 10px !important;
+  }
+  
+  .cta-text h2 {
+    font-size: 1.3rem !important;
+    margin-bottom: 5px !important;
+  }
+  
+  .cta-text p {
+    font-size: 0.85rem !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .cta-btn {
+    font-size: 0.8rem !important;
+    padding: 8px 16px !important;
+  }
+
+  .cta-graphics {
+    display: none !important;
+  }
+
+  /* Reduce whitespace between Process and Testimonials on Mobile */
+  .process-section {
+    padding-bottom: 10px !important;
+  }
+  .testimonials-section {
+    padding-top: 30px !important;
+  }
 }

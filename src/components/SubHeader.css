@@ -47,8 +47,8 @@
 
 .cert-text {
   color: var(--primary-color);
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1.6rem;
+  font-weight: 400;
   letter-spacing: 0.5px;
 }
 
