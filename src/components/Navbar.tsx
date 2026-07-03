@@ -16,6 +16,7 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
     { path: '/products', label: 'Products' },
+    { path: '/quote', label: 'Request Quote' },
     { path: '/contact', label: 'Contact Us' },
   ];
 
@@ -40,6 +41,9 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
+          <Link to="/quote" className="btn btn-primary nav-btn">
+            REQUEST A QUOTE
+          </Link>
         </nav>
 
         {/* Mobile Nav Toggle */}
@@ -63,6 +67,11 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link to="/quote" className="btn btn-primary" onClick={() => setIsMenuOpen(false)}>
+                REQUEST A QUOTE
+              </Link>
+            </li>
           </ul>
         </div>
       )}
