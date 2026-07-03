@@ -1189,17 +1189,7 @@
     margin-bottom: 0;
   }
 
-  /* Mask the line below the last circle */
-  .process-step:last-child::before {
-    content: '';
-    position: absolute;
-    left: 34px; /* Local to the step: 35px center - 1px */
-    top: 70px;
-    bottom: -100px;
-    width: 4px;
-    background-color: var(--surface-2);
-    z-index: -1;
-  }
+  /* Removed mask to prevent line bleeding */
 
   /* Compact Industries on Mobile */
   .industries-grid {
