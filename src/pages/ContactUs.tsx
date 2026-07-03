@@ -1,79 +1,86 @@
-import { MapPin, Phone, Mail } from 'lucide-react';
+import { MapPin, Phone, Mail, Navigation } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
+import './ContactUs.css';
 
 const ContactUs = () => {
   return (
     <div className="page-container">
-      <div className="page-header" style={{ backgroundColor: 'var(--primary-color)', color: 'white', padding: '60px 0', textAlign: 'center' }}>
+      {/* Premium Header */}
+      <div className="contact-header">
         <div className="container">
-          <h1 style={{ color: 'white' }}>Contact Us</h1>
-          <p>We are here to help and answer any question you might have</p>
+          <h1>Contact Us</h1>
+          <p>We are here to help and answer any question you might have. We look forward to hearing from you.</p>
         </div>
       </div>
 
-      <section className="section">
+      <section className="section contact-form-section">
         <div className="container">
-          <div className="grid grid-3" style={{ gap: '30px', marginBottom: '60px' }}>
-            <div style={{ background: 'white', padding: '30px', borderRadius: 'var(--radius)', textAlign: 'center', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ background: '#f1f5f9', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: 'var(--primary-color)' }}>
-                <MapPin size={24} />
+          {/* Contact Cards Grid (Pulled up into header) */}
+          <div className="grid grid-3 contact-cards-grid">
+            <div className="contact-card">
+              <div className="contact-icon-wrapper">
+                <MapPin size={28} />
               </div>
               <h4>Visit Us</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '0' }}>
+              <p>
                 {SITE_CONFIG.contact.address.map((line, i) => (
                   <span key={i}>{line}<br /></span>
                 ))}
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: '30px', borderRadius: 'var(--radius)', textAlign: 'center', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ background: '#f1f5f9', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: 'var(--primary-color)' }}>
-                <Phone size={24} />
+            <div className="contact-card">
+              <div className="contact-icon-wrapper">
+                <Phone size={28} />
               </div>
               <h4>Call Us</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '0' }}>
+              <p>
                 {SITE_CONFIG.contact.phone}
               </p>
             </div>
             
-            <div style={{ background: 'white', padding: '30px', borderRadius: 'var(--radius)', textAlign: 'center', boxShadow: 'var(--shadow-sm)' }}>
-              <div style={{ background: '#f1f5f9', width: '60px', height: '60px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 20px', color: 'var(--primary-color)' }}>
-                <Mail size={24} />
+            <div className="contact-card">
+              <div className="contact-icon-wrapper">
+                <Mail size={28} />
               </div>
               <h4>Email Us</h4>
-              <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '0' }}>
+              <p>
                 {SITE_CONFIG.contact.email}
               </p>
             </div>
           </div>
 
+          {/* Form & Map Section */}
           <div className="grid grid-2" style={{ gap: '50px', alignItems: 'center' }}>
-            <div>
-              <h4 className="section-subtitle">GET IN TOUCH</h4>
-              <h2>Send us a message</h2>
-              <form style={{ marginTop: '30px' }}>
-                <div className="grid grid-2" style={{ gap: '20px' }}>
-                  <div className="form-group">
-                    <input type="text" className="form-control" placeholder="Your Name" />
+            <div className="contact-form-container">
+              <h4 className="section-subtitle" style={{ marginBottom: '10px' }}>GET IN TOUCH</h4>
+              <h2 style={{ marginBottom: '30px', fontSize: '2rem' }}>Send us a message</h2>
+              <form>
+                <div className="grid grid-2" style={{ gap: '20px', marginBottom: '20px' }}>
+                  <div className="form-group" style={{ marginBottom: '0' }}>
+                    <input type="text" className="form-control" placeholder="Your Name" required />
                   </div>
-                  <div className="form-group">
-                    <input type="email" className="form-control" placeholder="Your Email" />
+                  <div className="form-group" style={{ marginBottom: '0' }}>
+                    <input type="email" className="form-control" placeholder="Your Email" required />
                   </div>
                 </div>
-                <div className="form-group">
-                  <input type="text" className="form-control" placeholder="Subject" />
+                <div className="form-group" style={{ marginBottom: '20px' }}>
+                  <input type="text" className="form-control" placeholder="Subject" required />
                 </div>
-                <div className="form-group">
-                  <textarea className="form-control" rows={5} placeholder="Your Message"></textarea>
+                <div className="form-group" style={{ marginBottom: '20px' }}>
+                  <textarea className="form-control" rows={6} placeholder="How can we help you?" required></textarea>
                 </div>
-                <button type="button" className="btn btn-primary">SEND MESSAGE</button>
+                <button type="submit" className="btn btn-primary">SEND MESSAGE</button>
               </form>
             </div>
 
-            <div style={{ height: '450px', backgroundColor: '#e2e8f0', borderRadius: 'var(--radius)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--text-light)', flexDirection: 'column' }}>
-              <MapPin size={48} style={{ marginBottom: '15px' }} />
-              <h3>Interactive Map</h3>
-              <p>Google Maps Integration Here</p>
+            {/* Premium Map Placeholder */}
+            <div className="map-container">
+              <div className="map-content">
+                <Navigation size={48} className="map-icon" />
+                <h3>Interactive Map</h3>
+                <p>Google Maps integration goes here.</p>
+              </div>
             </div>
           </div>
         </div>
