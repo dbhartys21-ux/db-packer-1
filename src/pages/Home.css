@@ -899,6 +899,11 @@
 /* Responsive Enhancements */
 .products-section {
   padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.industries-section {
+  padding-top: 40px;
 }
 
 .products-section-header {
