@@ -6,11 +6,13 @@ const Products = () => {
 
   return (
     <div className="page-container">
-      <div className="page-header" style={{ backgroundColor: 'var(--primary-color)', color: 'white', padding: '60px 0', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ color: 'white' }}>Our Products</h1>
-          <p>Comprehensive Packaging Solutions for Every Industry</p>
-        </div>
+      <div className="page-breadcrumb">
+        <Link to="/">DB Packer</Link> &bull; Our Products
+      </div>
+
+      <div className="minimal-page-header">
+        <h1>Our Products</h1>
+        <p>Comprehensive Packaging Solutions for Every Industry</p>
       </div>
 
       <section className="section">

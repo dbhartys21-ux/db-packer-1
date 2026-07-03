@@ -171,3 +171,54 @@ p {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(15, 61, 129, 0.1);
 }
+
+/* Minimal Page Header (Shared) */
+.page-breadcrumb {
+  text-align: center;
+  padding-top: 50px;
+  font-size: 0.9rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.page-breadcrumb a {
+  color: #9ca3af;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.page-breadcrumb a:hover {
+  color: #4b5563;
+}
+
+.minimal-page-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 30px auto 50px;
+  padding: 0 20px;
+}
+
+.minimal-page-header h1 {
+  font-family: 'Georgia', 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: #111827;
+  margin-bottom: 25px;
+  letter-spacing: -1px;
+}
+
+.minimal-page-header p {
+  font-size: 1.05rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .minimal-page-header {
+    margin: 20px auto 25px;
+  }
+  
+  .minimal-page-header h1 {
+    font-size: 3rem;
+  }
+}

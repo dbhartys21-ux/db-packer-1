@@ -1,13 +1,17 @@
 
 
+import { Link } from 'react-router-dom';
+
 const RequestQuote = () => {
   return (
     <div className="page-container">
-      <div className="page-header" style={{ backgroundColor: 'var(--primary-color)', color: 'white', padding: '60px 0', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ color: 'white' }}>Request A Quote</h1>
-          <p>Get a custom packaging solution tailored to your business needs</p>
-        </div>
+      <div className="page-breadcrumb">
+        <Link to="/">DB Packer</Link> &bull; Request A Quote
+      </div>
+
+      <div className="minimal-page-header">
+        <h1>Request A Quote</h1>
+        <p>Get a custom packaging solution tailored to your business needs</p>
       </div>
 
       <section className="section">

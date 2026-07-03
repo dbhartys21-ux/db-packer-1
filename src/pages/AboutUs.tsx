@@ -1,14 +1,18 @@
 
 import { Target, Eye, ShieldCheck, Users } from 'lucide-react';
 
+import { Link } from 'react-router-dom';
+
 const AboutUs = () => {
   return (
     <div className="page-container">
-      <div className="page-header" style={{ backgroundColor: 'var(--primary-color)', color: 'white', padding: '60px 0', textAlign: 'center' }}>
-        <div className="container">
-          <h1 style={{ color: 'white' }}>About DBPack</h1>
-          <p>Excellence in Packaging Solutions</p>
-        </div>
+      <div className="page-breadcrumb">
+        <Link to="/">DB Packer</Link> &bull; About Us
+      </div>
+
+      <div className="minimal-page-header">
+        <h1>About DBPack</h1>
+        <p>Excellence in Packaging Solutions</p>
       </div>
 
       <section className="section">

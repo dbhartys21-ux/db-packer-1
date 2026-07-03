@@ -6,48 +6,6 @@
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Breadcrumb */
-.contact-breadcrumb {
-  text-align: center;
-  padding-top: 50px;
-  font-size: 0.9rem;
-  color: #6b7280;
-  font-weight: 500;
-}
-
-.contact-breadcrumb a {
-  color: #9ca3af;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.contact-breadcrumb a:hover {
-  color: #4b5563;
-}
-
-/* Header Typography */
-.contact-page-header {
-  text-align: center;
-  max-width: 600px;
-  margin: 30px auto 50px;
-  padding: 0 20px;
-}
-
-.contact-page-header h1 {
-  font-family: 'Georgia', 'Playfair Display', serif;
-  font-size: 4rem;
-  font-weight: 400;
-  color: #111827;
-  margin-bottom: 25px;
-  letter-spacing: -1px;
-}
-
-.contact-page-header p {
-  font-size: 1.05rem;
-  color: #4b5563;
-  line-height: 1.6;
-}
-
 /* Form Section & Wrapper */
 .contact-form-section {
   position: relative;
@@ -220,18 +178,10 @@ select.form-control:not(:invalid) {
 }
 
 @media (max-width: 768px) {
-  .contact-page-header {
-    margin: 20px auto 25px;
-  }
-
   .form-row {
     flex-direction: column;
     gap: 12px;
     margin-bottom: 12px;
-  }
-  
-  .contact-page-header h1 {
-    font-size: 3rem;
   }
 
   .form-submit-wrapper {

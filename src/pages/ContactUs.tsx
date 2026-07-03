@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const ContactUs = () => {
   return (
     <div className="contact-page-container">
-      <div className="contact-breadcrumb">
+      <div className="page-breadcrumb">
         <Link to="/">DB Packer</Link> &bull; Contact us
       </div>
 
-      <div className="contact-page-header">
+      <div className="minimal-page-header">
         <h1>Contact us</h1>
         <p>Get in touch and ask us anything. Whether you need custom packaging solutions, want to check our manufacturing capacity, or just have a general question — we answer it all.</p>
       </div>
