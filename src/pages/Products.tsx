@@ -1,39 +1,61 @@
-
+import './Products.css';
 import { Link } from 'react-router-dom';
 import { products } from '../data/products';
+import { ArrowRight } from 'lucide-react';
 
 const Products = () => {
-
   return (
-    <div className="page-container">
-      <div className="page-breadcrumb">
-        <Link to="/">DB Packer</Link> &bull; Our Products
-      </div>
+    <div className="products-page-container">
+      
+      {/* Hero Banner */}
+      <section className="products-hero">
+        <div className="products-hero-overlay"></div>
+        <div className="container products-hero-content">
+          <h1>Our Packaging Catalog</h1>
+          <p>Explore our premium range of industrial and retail packaging solutions, engineered for maximum protection and aesthetic appeal.</p>
+        </div>
+      </section>
 
-      <div className="minimal-page-header">
-        <h1>Our Products</h1>
-        <p>Comprehensive Packaging Solutions for Every Industry</p>
-      </div>
-
-      <section className="section">
+      {/* Main Grid */}
+      <section className="products-main-section">
         <div className="container">
-          <div className="products-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '20px' }}>
+          <div className="page-breadcrumb" style={{ marginBottom: '40px', fontSize: '0.95rem' }}>
+            <Link to="/" style={{ color: '#64748b', textDecoration: 'none' }}>DB Packer</Link> 
+            <span style={{ margin: '0 10px', color: '#cbd5e1' }}>/</span> 
+            <span style={{ color: '#0f172a', fontWeight: '500' }}>Products</span>
+          </div>
+
+          <div className="premium-products-grid">
             {products.map((p, i) => (
-              <Link to={`/product/${p.id}`} key={i} className="product-card" style={{ background: 'white', borderRadius: 'var(--radius)', border: '1px solid var(--border-color)', overflow: 'hidden', transition: 'var(--transition)', textDecoration: 'none', color: 'inherit', display: 'flex', flexDirection: 'column' }}>
-                <div style={{ height: '260px', backgroundColor: 'var(--white)', padding: '20px', display: 'flex', alignItems: 'center', justifyContent: 'center', overflow: 'hidden', borderBottom: '1px solid var(--border-color)' }}>
-                  <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+              <Link to={`/product/${p.id}`} key={i} className="premium-product-card">
+                <div className="premium-product-img-wrapper">
+                  <img src={p.img} alt={p.title} />
                 </div>
-                <div style={{ padding: '25px', textAlign: 'center', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--secondary-color)', fontWeight: 'bold', textTransform: 'uppercase', marginBottom: '10px', display: 'block' }}>{p.category}</span>
-                  <h4 style={{ marginBottom: '10px' }}>{p.title}</h4>
-                  <p style={{ color: 'var(--text-light)', fontSize: '0.9rem', marginBottom: '20px', flex: 1 }}>{p.desc}</p>
-                  <span className="btn btn-secondary" style={{ padding: '8px 16px', fontSize: '0.85rem', width: '100%' }}>View Details</span>
+                <div className="premium-product-info">
+                  <span className="premium-product-cat">{p.category}</span>
+                  <h4 className="premium-product-title">{p.title}</h4>
+                  <p className="premium-product-desc">{p.desc}</p>
+                  <div className="premium-product-btn">
+                    View Specifications <ArrowRight size={16} style={{ verticalAlign: 'middle', marginLeft: '5px' }}/>
+                  </div>
                 </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
+
+      {/* Bottom CTA */}
+      <section className="products-cta-section">
+        <div className="container products-cta-content">
+          <h2>Need a Custom Solution?</h2>
+          <p>We manufacture highly customized packaging tailored to your exact product dimensions, material requirements, and branding.</p>
+          <Link to="/quote" className="btn btn-primary" style={{ padding: '15px 40px', fontSize: '1.1rem', borderRadius: '50px' }}>
+            REQUEST A CUSTOM QUOTE
+          </Link>
+        </div>
+      </section>
+
     </div>
   );
 };
