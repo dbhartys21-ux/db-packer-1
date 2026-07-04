@@ -80,10 +80,10 @@ const Home = () => {
   ];
 
   const industries = [
-    { name: "E-commerce & Retail", img: "/assets/boxes.png" },
-    { name: "Food & Beverage", img: "/assets/clean-warehouse.png" },
-    { name: "Industrial Manufacturing", img: "/assets/stretch-film.png" },
-    { name: "Logistics & Healthcare", img: "/assets/bubble-wrap.png" }
+    { name: "E-commerce & Retail", img: "/assets/ind-ecommerce.png" },
+    { name: "Food & Beverage", img: "/assets/ind-food.png" },
+    { name: "Industrial Manufacturing", img: "/assets/ind-manufacturing.png" },
+    { name: "Logistics & Healthcare", img: "/assets/ind-logistics.png" }
   ];
 
   const faqs = [
