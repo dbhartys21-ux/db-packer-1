@@ -1256,35 +1256,17 @@
   .stats-grid {
     grid-template-columns: 1fr;
   }
-
-  .about-industries-combined {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
-  .products-section {
-    padding-bottom: 0 !important;
-    margin-bottom: 0 !important;
-  }
-
-  .products-grid {
-    padding-bottom: 15px !important;
-  }
 }
 
 @media (max-width: 768px) {
-  .about-industries-combined {
-    padding-top: 0 !important;
-    margin-top: 0 !important;
-  }
-
   .products-section {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
   }
 
-  .products-grid {
-    padding-bottom: 15px !important;
+  .about-industries-combined {
+    padding: 15px 0 30px 0 !important; /* Force small gap on top */
+    margin-top: 0 !important;
   }
 
   .aic-container {
