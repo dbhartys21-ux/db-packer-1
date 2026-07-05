@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import logoImg from '../assets/without-bg.png';
+import logoImg from '../assets/adb-bg.png';
 import { useState } from 'react';
 import './Navbar.css';
 
