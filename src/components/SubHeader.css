@@ -35,14 +35,14 @@
   align-items: center;
   justify-content: center;
   gap: 30px;
-  background-color: var(--primary-color);
+  background-color: var(--text-color);
 }
 .subheader-right::before {
   content: '';
   position: absolute;
   top: 0; bottom: 0; left: 100%;
   width: 50vw;
-  background-color: var(--primary-color);
+  background-color: var(--text-color);
 }
 
 .page-title-minimal h1 {
