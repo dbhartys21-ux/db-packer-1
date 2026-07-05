@@ -25,7 +25,7 @@ const Home = () => {
       if (processRef.current) {
         const rect = processRef.current.getBoundingClientRect();
         let progress = 0;
-        
+
         if (window.innerWidth <= 768) {
           // Mobile: line fills vertically as user scrolls through the section
           const triggerPoint = window.innerHeight * 0.6;
@@ -36,12 +36,12 @@ const Home = () => {
           const end = window.innerHeight * 0.35;
           progress = (start - rect.top) / (start - end);
         }
-        
+
         progress = Math.max(0, Math.min(1, progress));
         setScrollProgress(progress);
       }
     };
-    
+
     window.addEventListener('scroll', handleScroll);
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
@@ -50,7 +50,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentHeroIdx((prev) => (prev + 1) % heroImages.length);
-    }, 6000);
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -74,10 +74,10 @@ const Home = () => {
   ];
 
   const testimonials = [
-    { quote: "DBPack completely transformed our logistics. Their corrugated boxes are the strongest we've used.", name: "John Doe", company: "RetailPlus" }, 
-    { quote: "Outstanding service and 98% on-time delivery. They truly act as a partner in our supply chain.", name: "Sarah Jenkins", company: "TechCorp Logistics" }, 
-    { quote: "The custom stretch films they provide helped us reduce damage during transit by over 40%.", name: "Mike Alvarez", company: "GlobalShipping Co." }, 
-    { quote: "Reliable, high-quality, and cost-effective. We couldn't ask for a better packaging partner.", name: "David Chen", company: "FreshFoods Inc." } 
+    { quote: "DBPack completely transformed our logistics. Their corrugated boxes are the strongest we've used.", name: "John Doe", company: "RetailPlus" },
+    { quote: "Outstanding service and 98% on-time delivery. They truly act as a partner in our supply chain.", name: "Sarah Jenkins", company: "TechCorp Logistics" },
+    { quote: "The custom stretch films they provide helped us reduce damage during transit by over 40%.", name: "Mike Alvarez", company: "GlobalShipping Co." },
+    { quote: "Reliable, high-quality, and cost-effective. We couldn't ask for a better packaging partner.", name: "David Chen", company: "FreshFoods Inc." }
   ];
 
   const industries = [
@@ -99,10 +99,10 @@ const Home = () => {
       {/* 1. Hero Section */}
       <section className="hero-section">
         {heroImages.map((img, idx) => (
-          <div 
+          <div
             key={idx}
             className="hero-bg-slide"
-            style={{ 
+            style={{
               backgroundImage: `url(${img})`,
               opacity: currentHeroIdx === idx ? 1 : 0
             }}
@@ -111,7 +111,7 @@ const Home = () => {
         <div className="hero-overlay"></div>
 
         <div className="hero-content">
-          <motion.div 
+          <motion.div
             className="hero-text"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -120,7 +120,7 @@ const Home = () => {
             <h1>SMART PACKAGING<br />STRONGER FUTURE</h1>
             <p>High quality packaging solutions for every industry.<br />Reliable. Sustainable. Customizable.</p>
             <Link to="/quote" className="btn btn-primary hero-btn">
-              REQUEST A QUOTE <ChevronRight size={18} style={{marginLeft: '5px'}}/>
+              REQUEST A QUOTE <ChevronRight size={18} style={{ marginLeft: '5px' }} />
             </Link>
           </motion.div>
         </div>
@@ -152,31 +152,31 @@ const Home = () => {
             <Link to="/products" className="btn btn-primary" style={{ alignSelf: 'flex-start' }}>VIEW ALL PRODUCTS</Link>
           </div>
         </div>
-          
+
         <div className="carousel-container" style={{ position: 'relative', boxSizing: 'border-box', width: '100%' }}>
           <button className="carousel-btn left" onClick={scrollLeft} aria-label="Previous Products">
             <ArrowLeft size={20} />
           </button>
           <div className="products-grid" ref={carouselRef} style={{ padding: '10px 0' }}>
             {products.map((p, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                >
-                  <Link to={`/product/${p.id}`} className="product-card" style={{ display: 'block', textDecoration: 'none' }}>
-                    <div className="product-img-mock" style={{ overflow: 'hidden', padding: '20px', backgroundColor: 'var(--white)', borderBottom: '1px solid var(--border-color)' }}>
-                      <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
-                    </div>
-                    <div className="product-info">
-                      <h4>{p.title}</h4>
-                      <p>{p.desc}</p>
-                      <span className="view-details" style={{ display: 'inline-block', marginTop: '15px', color: 'var(--secondary-color)', fontWeight: '600', fontSize: '0.9rem' }}>View details →</span>
-                    </div>
-                  </Link>
-                </motion.div>
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+              >
+                <Link to={`/product/${p.id}`} className="product-card" style={{ display: 'block', textDecoration: 'none' }}>
+                  <div className="product-img-mock" style={{ overflow: 'hidden', padding: '20px', backgroundColor: 'var(--white)', borderBottom: '1px solid var(--border-color)' }}>
+                    <img src={p.img} alt={p.title} style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  </div>
+                  <div className="product-info">
+                    <h4>{p.title}</h4>
+                    <p>{p.desc}</p>
+                    <span className="view-details" style={{ display: 'inline-block', marginTop: '15px', color: 'var(--secondary-color)', fontWeight: '600', fontSize: '0.9rem' }}>View details →</span>
+                  </div>
+                </Link>
+              </motion.div>
             ))}
           </div>
           <button className="carousel-btn right" onClick={scrollRight} aria-label="Next Products">
@@ -194,8 +194,8 @@ const Home = () => {
           </div>
           <div className="industries-grid">
             {industries.map((ind, i) => (
-              <motion.div 
-                key={i} 
+              <motion.div
+                key={i}
                 className="industry-card"
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -219,12 +219,12 @@ const Home = () => {
             <h4 className="section-subtitle">ABOUT US</h4>
             <h2>Who We Are</h2>
             <p>
-              DBPack is a trusted name in the packaging industry, delivering high-quality, cost-effective, and sustainable packaging solutions to businesses of all sizes. 
+              DBPack is a trusted name in the packaging industry, delivering high-quality, cost-effective, and sustainable packaging solutions to businesses of all sizes.
             </p>
             <p style={{ color: 'var(--text-light)', marginBottom: '20px' }}>
               <strong>Our Story:</strong> Starting with a small facility over a decade ago, we recognized a gap in reliable B2B packaging. Today, we've grown into a comprehensive manufacturing partner that ensures your products are well-protected and presented at their best.
             </p>
-            
+
             <div className="about-stats">
               <div className="about-stat">
                 <strong>50,000+</strong>
@@ -244,14 +244,14 @@ const Home = () => {
 
             <div className="mission-vision-grid" style={{ marginTop: '0' }}>
               <div className="mv-item">
-                <Target size={24} className="mv-icon"/>
+                <Target size={24} className="mv-icon" />
                 <div>
                   <h5 style={{ fontSize: '1.05rem' }}>Our Mission</h5>
                   <p style={{ fontSize: '0.85rem' }}>To deliver innovative and sustainable packaging solutions.</p>
                 </div>
               </div>
               <div className="mv-item">
-                <Eye size={24} className="mv-icon"/>
+                <Eye size={24} className="mv-icon" />
                 <div>
                   <h5 style={{ fontSize: '1.05rem' }}>Our Vision</h5>
                   <p style={{ fontSize: '0.85rem' }}>To be a leading provider known for quality and reliability.</p>
@@ -259,9 +259,9 @@ const Home = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="about-photo-grid">
-             {/* TODO: replace with real facility/team photos */}
+            {/* TODO: replace with real facility/team photos */}
             <img src="/assets/clean-warehouse.png" alt="Facility Main" className="about-photo-main" />
             <img src="/assets/boxes.png" alt="Production Line 1" className="about-photo-sub" />
             <img src="/assets/stretch-film.png" alt="Production Line 2" className="about-photo-sub" />
@@ -284,7 +284,7 @@ const Home = () => {
             <h4 style={{ color: 'var(--text-light)', fontWeight: '500' }}>Trusted by businesses across industries</h4>
           </div>
         </div>
-        
+
         <div className="marquee-wrapper">
           <div className="marquee-content">
             {[1, 2].map((track) => (
@@ -309,7 +309,7 @@ const Home = () => {
             <h2 style={{ color: 'var(--white)' }}>Scale & Quality You Can Trust</h2>
           </div>
           <div className="capabilities-grid">
-            <motion.div 
+            <motion.div
               className="capability-card"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -344,7 +344,7 @@ const Home = () => {
         <div className="container">
           <h4 className="section-subtitle">HOW IT WORKS</h4>
           <h2>Simple & Seamless Process</h2>
-          
+
           <div className="process-grid" style={{ '--progress': scrollProgress } as React.CSSProperties}>
             {processSteps.map((step, i) => {
               const stepThreshold = i * 0.25;
@@ -366,7 +366,7 @@ const Home = () => {
         <div className="container">
           <h4 className="section-subtitle">CLIENT FEEDBACK</h4>
           <h2>What Our Partners Say</h2>
-          
+
           <div className="testimonials-grid">
             {testimonials.map((t, i) => (
               <div key={i} className="testimonial-card">
@@ -394,8 +394,8 @@ const Home = () => {
           </div>
           <div className="faq-list">
             {faqs.map((faq, i) => (
-              <div 
-                key={i} 
+              <div
+                key={i}
                 className={`faq-item ${openFaq === i ? 'open' : ''}`}
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
               >
