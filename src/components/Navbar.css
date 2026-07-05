@@ -221,6 +221,7 @@
 @media (max-width: 900px) {
   .navbar-container {
     background-color: var(--primary-color);
+    padding: 5px 0 !important;
   }
 
   .navbar-content {

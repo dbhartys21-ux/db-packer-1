@@ -1268,10 +1268,9 @@
     min-height: auto;
     aspect-ratio: 16/9;
     padding: 0;
-    margin: 80px 4% 0 4%; /* Floating banner look */
-    width: 92%;
-    border-radius: 16px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-top: 75px; /* Offset for the fixed navbar */
+    width: 100%;
+    border-radius: 0;
   }
 
   .hero-text {
