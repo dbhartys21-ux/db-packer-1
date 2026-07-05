@@ -1329,9 +1329,15 @@
     font-size: 0.65rem !important;
   }
 
-  .aic-title {
+  .aic-title,
+  .aic-title-small {
     font-size: 1.2rem;
     margin-bottom: 10px;
+  }
+  
+  .aic-industries-col .section-subtitle {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
   }
   
   .aic-text {
