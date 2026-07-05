@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, Target, Eye, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy, Package } from 'lucide-react';
+import { ChevronRight, Target, Eye, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { products } from '../data/products';
 import { SITE_CONFIG } from '../config/site';
