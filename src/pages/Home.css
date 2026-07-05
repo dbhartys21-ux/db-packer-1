@@ -1371,19 +1371,23 @@
   }
 
   .products-section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-right: 55px; /* Leave space for the floating contact widgets */
   }
 
   .products-section-header h2 {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
+    margin: 0;
   }
 
   .products-section-header .btn {
-    font-size: 0.8rem;
-    padding: 8px 12px;
-    align-self: center !important;
+    font-size: 0.65rem;
+    padding: 6px 10px;
+    align-self: auto !important;
+    white-space: nowrap;
   }
 
   .capabilities-section {
