@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Package, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import { SITE_CONFIG } from '../config/site';
 import logoImg from '../assets/Adobe Express - file.png';
 import './Footer.css';
