@@ -1,15 +1,15 @@
 :root {
-  --primary-color: #a08c69; /* Even more muted, less yellow, earthy bronze */
-  --secondary-color: #837152; /* Darker taupe bronze */
-  --bg-color: #fdfdfd;
-  --surface-1: #f8fafc; 
-  --surface-2: #f6f5f2; /* Very subtle greyish warm tint */
-  --text-color: #111827; /* Dark slate text */
-  --text-light: #64748b;
+  --primary-color: #D4AF37; /* ADB Pack Gold */
+  --secondary-color: #1E3A8A; /* ADB Pack Royal Blue */
+  --bg-color: #ffffff;
+  --surface-1: #F8FAFC; 
+  --surface-2: #F8FAFC;
+  --text-color: #0B1320; /* ADB Pack Dark Navy */
+  --text-light: #6B7280; /* ADB Pack Grey */
   --white: #ffffff;
   --border-color: #e2e8f0;
   
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-family: 'Montserrat', sans-serif;
   --transition: all 0.3s ease;
   --radius: 8px;
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);

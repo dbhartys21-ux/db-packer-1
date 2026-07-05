@@ -609,7 +609,7 @@
   padding: 60px 0;
   border-radius: 12px;
   margin: 40px 20px;
-  background-image: radial-gradient(circle at top right, #3f3f46, #111827);
+  background-image: radial-gradient(circle at top right, var(--secondary-color), var(--text-color));
 }
 
 .cta-content {
