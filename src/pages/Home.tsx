@@ -211,6 +211,24 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Trusted By Ticker */}
+      <section className="trusted-ticker-section">
+        <p className="ticker-label">Trusted by businesses across industries</p>
+        <div className="ticker-container">
+          <div className="ticker-track">
+            {[...Array(4)].map((_, i) => (
+              <Fragment key={i}>
+                <span className="ticker-item">TechCorp</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">GlobalShipping</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">RetailPlus</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">EcoGoods</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">FreshFoods</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">BuildRight</span><span className="ticker-dot">•</span>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <div className="mobile-only-home">
         {/* Mobile About Section */}
@@ -430,29 +448,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. Client Logos (Trust Banner) */}
-      <section className="client-logos">
-        <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <h4 style={{ color: 'var(--text-light)', fontWeight: '500' }}>Trusted by businesses across industries</h4>
-          </div>
-        </div>
-
-        <div className="marquee-wrapper">
-          <div className="marquee-content">
-            {[1, 2].map((track) => (
-              <div key={track} className="marquee-track">
-                <div className="logo-placeholder">TechCorp</div>
-                <div className="logo-placeholder">GlobalShipping</div>
-                <div className="logo-placeholder">RetailPlus</div>
-                <div className="logo-placeholder">EcoGoods</div>
-                <div className="logo-placeholder">FreshFoods</div>
-                <div className="logo-placeholder">BuildRight</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* 5. Capabilities / Quality */}
       <section className="capabilities-section section bg-white">
