@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy, ShoppingCart, Coffee, HeartPulse, MousePointerClick, MessageSquare, PackageCheck, Truck, TrendingUp, Headset, Shield, Package, Leaf, Map } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -208,6 +208,25 @@ const Home = () => {
           <button className="carousel-btn right" onClick={scrollRight} aria-label="Next Products">
             <ArrowRight size={20} />
           </button>
+        </div>
+      </section>
+
+      {/* Trusted By Ticker */}
+      <section className="trusted-ticker-section">
+        <p className="ticker-label">Trusted by businesses across industries</p>
+        <div className="ticker-container">
+          <div className="ticker-track">
+            {[...Array(4)].map((_, i) => (
+              <Fragment key={i}>
+                <span className="ticker-item">TechCorp</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">GlobalShipping</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">RetailPlus</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">EcoGoods</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">FreshFoods</span><span className="ticker-dot">•</span>
+                <span className="ticker-item">BuildRight</span><span className="ticker-dot">•</span>
+              </Fragment>
+            ))}
+          </div>
         </div>
       </section>
 
