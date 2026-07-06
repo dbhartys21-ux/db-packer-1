@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef, Fragment } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronRight, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy, ShoppingCart, Coffee, HeartPulse, MousePointerClick, MessageSquare, PackageCheck, Truck, TrendingUp, Headset, Shield, Package, Leaf, Map } from 'lucide-react';
+import { ChevronRight, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy, ShoppingCart, Coffee, HeartPulse, MousePointerClick, MessageSquare, PackageCheck, Truck, TrendingUp, Headset, Map } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { products } from '../data/products';
 import { SITE_CONFIG } from '../config/site';
