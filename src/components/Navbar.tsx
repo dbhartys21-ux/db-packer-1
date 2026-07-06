@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import logoImg from '../assets/Adobe Express - file.png';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
@@ -7,6 +7,7 @@ import './Navbar.css';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
   const location = useLocation();
 
   useEffect(() => {
@@ -21,6 +22,19 @@ const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'light' ? 'dark' : 'light');
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -61,6 +75,13 @@ const Navbar = () => {
 
         {/* Desktop Right Action */}
         <div className="nav-right">
+          <button 
+            onClick={toggleTheme} 
+            className={`theme-toggle-btn ${shouldBeSolid ? 'scrolled' : ''}`}
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
           <Link to="/quote" className="btn btn-primary nav-btn">
             REQUEST A QUOTE
           </Link>
@@ -87,6 +108,14 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li className="mobile-theme-toggle">
+              <button 
+                onClick={toggleTheme} 
+                style={{ display: 'flex', alignItems: 'center', gap: '10px', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: '10px 0', fontSize: '1rem', fontWeight: 500 }}
+              >
+                {theme === 'dark' ? <><Sun size={20} /> Light Mode</> : <><Moon size={20} /> Dark Mode</>}
+              </button>
+            </li>
             <li>
               <Link to="/quote" className="btn btn-primary" onClick={() => setIsMenuOpen(false)}>
                 REQUEST A QUOTE

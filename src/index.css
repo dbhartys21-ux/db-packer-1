@@ -231,3 +231,25 @@ p {
     font-size: 3rem;
   }
 }
+
+/* Dark Theme overrides */
+[data-theme="dark"] {
+  --primary-color: #6366f1;
+  --secondary-color: #4f4fe6;
+  --bg-color: #000000;
+  --surface-1: #111111;
+  --surface-2: #222222;
+  --text-color: #f8f8f8;
+  --text-light: #aaaaaa;
+  --white: #111111;
+  --border-color: #222222;
+}
+
+[data-theme="dark"] .btn-primary {
+  color: #ffffff;
+}
+
+[data-theme="dark"] .nav-link:hover, 
+[data-theme="dark"] .nav-link.active {
+  color: #ffffff;
+}

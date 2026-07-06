@@ -33,27 +33,7 @@ export const products: Product[] = [
       "Finishing": "Lamination, Foiling, Spot UV"
     }
   },
-  {
-    id: "corrugated-boxes",
-    title: "Corrugated Boxes",
-    category: "Boxes",
-    desc: "Strong, durable & customizable boxes for safe packaging of goods of all sizes.",
-    fullDesc: "Our heavy-duty corrugated boxes are engineered to provide maximum protection for your products during transit, storage, and handling. Manufactured from high-quality kraft paper, these boxes offer superior stacking strength and crush resistance.",
-    img: "/assets/corrugated-boxes.png",
-    gallery: ["/assets/corrugated-boxes.png"],
-    features: [
-      "High crush resistance and stacking strength",
-      "100% recyclable and eco-friendly",
-      "Available in Single, Double, and Triple Wall",
-      "Custom printing options available for branding",
-      "Shipped flat to save storage space"
-    ],
-    specifications: {
-      "Material": "Kraft Paper / Fluting Medium",
-      "Flute Types": "A, B, C, E, or Double-wall",
-      "Bursting Strength": "10 - 45 kg/cm²"
-    }
-  },
+
   {
     id: "rigid-boxes",
     title: "Rigid Boxes",
@@ -200,6 +180,27 @@ export const products: Product[] = [
       "Width": "48mm, 72mm",
       "Length": "65m or custom",
       "Printing": "Custom brand logo/text"
+    }
+  },
+  {
+    id: "corrugated-boxes",
+    title: "Corrugated Boxes",
+    category: "Boxes",
+    desc: "Strong, durable & customizable boxes for safe packaging of goods of all sizes.",
+    fullDesc: "Our heavy-duty corrugated boxes are engineered to provide maximum protection for your products during transit, storage, and handling. Manufactured from high-quality kraft paper, these boxes offer superior stacking strength and crush resistance.",
+    img: "/assets/corrugated-boxes.png",
+    gallery: ["/assets/corrugated-boxes.png"],
+    features: [
+      "High crush resistance and stacking strength",
+      "100% recyclable and eco-friendly",
+      "Available in Single, Double, and Triple Wall",
+      "Custom printing options available for branding",
+      "Shipped flat to save storage space"
+    ],
+    specifications: {
+      "Material": "Kraft Paper / Fluting Medium",
+      "Flute Types": "A, B, C, E, or Double-wall",
+      "Bursting Strength": "10 - 45 kg/cm²"
     }
   }
 ];

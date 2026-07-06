@@ -68,12 +68,12 @@ const Footer = () => {
         <div className="footer-col">
           <h4 className="footer-heading">OUR PRODUCTS</h4>
           <ul className="footer-links">
-            <li><Link to="/products">Corrugated Boxes</Link></li>
-            <li><Link to="/products">Stretch Film Rolls</Link></li>
-            <li><Link to="/products">Bubble Wrap Rolls</Link></li>
-            <li><Link to="/products">Packing Tape</Link></li>
-            <li><Link to="/products">PP Strapping Roll</Link></li>
-            <li><Link to="/products">Zip Lock Pouches</Link></li>
+            <li><Link to="/product/mono-cartons">Mono Cartons</Link></li>
+            <li><Link to="/product/rigid-boxes">Rigid Boxes</Link></li>
+            <li><Link to="/product/self-adhesive-labels">Self Adhesive Labels</Link></li>
+            <li><Link to="/product/pouches">Pouches</Link></li>
+            <li><Link to="/product/promotional-tape-roll">Promotional Tape Roll</Link></li>
+            <li><Link to="/product/corrugated-boxes">Corrugated Boxes</Link></li>
           </ul>
         </div>
 
