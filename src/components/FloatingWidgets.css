@@ -89,13 +89,13 @@
 
 @media (max-width: 768px) {
   .floating-widgets-container {
-    bottom: 20px;
-    right: 20px;
-    gap: 10px;
+    bottom: 16px !important;
+    right: 16px !important;
+    gap: 8px !important;
   }
   
   .floating-btn {
-    width: 46px;
-    height: 46px;
+    width: 42px !important;
+    height: 42px !important;
   }
 }
