@@ -21,7 +21,7 @@ const StatCounter = ({ value, label, children }: { value: string; label: string;
     const end = numericVal;
     const duration = 1500;
     const stepTime = Math.max(Math.floor(duration / end), 15);
-    
+
     const timer = setInterval(() => {
       start += Math.ceil(end / 100);
       if (start >= end) {
@@ -149,7 +149,7 @@ const Home = () => {
             transition={{ duration: 0.8 }}
           >
             <div className="hero-iso-badge" role="status">
-              <ShieldCheck size={16} className="badge-icon" /> 
+              <ShieldCheck size={16} className="badge-icon" />
               <span>ISO 9001:2015 Certified Company</span>
             </div>
             <h1>SMART PACKAGING.<br />STRONGER FUTURE.</h1>
@@ -189,7 +189,7 @@ const Home = () => {
 
         <div className="products-section-header">
           <div>
-            <h4 className="section-subtitle">OUR PRODUCT LINE</h4>
+            <h4 className="section-subtitle">OUR PRODUCTS</h4>
             <div className="header-divider"></div>
           </div>
           <Link to="/products" className="btn btn-primary products-view-btn">
@@ -201,7 +201,7 @@ const Home = () => {
           <button className="carousel-btn left" onClick={scrollLeft} aria-label="Scroll left">
             <ArrowLeft size={20} />
           </button>
-          
+
           <div className="products-grid" ref={carouselRef}>
             {products.map((p, i) => (
               <motion.div
