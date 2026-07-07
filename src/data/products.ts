@@ -18,7 +18,7 @@ export const products: Product[] = [
     desc: "High-quality printed folding cartons for retail and product packaging.",
     fullDesc: "Our mono cartons are crafted from premium paperboard, offering exceptional printability and structural integrity. Ideal for pharmaceuticals, cosmetics, food, and FMCG products, providing an attractive retail presence.",
     img: "/assets/mono-cartons.png",
-    gallery: ["/assets/mono-cartons.png"],
+    gallery: ["/assets/mono-cartons.png", "/assets/mono-cartons-mockup.png"],
     features: [
       "High-quality offset printing",
       "Various finishes (Gloss, Matte, UV, Embossing)",
@@ -41,7 +41,7 @@ export const products: Product[] = [
     desc: "Premium, sturdy packaging for luxury items and gifts.",
     fullDesc: "Elevate your brand with our luxury rigid boxes. Made from thick, high-density board wrapped in premium paper, these boxes offer a superior unboxing experience. Perfect for jewelry, electronics, cosmetics, and premium gifting.",
     img: "/assets/rigid-boxes.png",
-    gallery: ["/assets/rigid-boxes.png"],
+    gallery: ["/assets/rigid-boxes.png", "/assets/rigid-boxes-mockup.png"],
     features: [
       "Luxurious look and premium feel",
       "Extremely durable and structural integrity",
@@ -62,7 +62,7 @@ export const products: Product[] = [
     desc: "Custom printed stickers and labels for product branding and identification.",
     fullDesc: "High-quality self-adhesive labels available in rolls and sheets. We offer a wide range of face materials and adhesives suitable for various applications, including food packaging, cosmetics, logistics, and industrial use.",
     img: "/assets/self-adhesive-labels.png",
-    gallery: ["/assets/self-adhesive-labels.png"],
+    gallery: ["/assets/self-adhesive-labels.png", "/assets/self-adhesive-labels-mockup.png"],
     features: [
       "Vibrant, high-resolution printing",
       "Various shapes and sizes",
@@ -83,7 +83,7 @@ export const products: Product[] = [
     desc: "Innovative blister packaging sealing without heat, protecting sensitive products.",
     fullDesc: "Cold seal blister packaging uses a cohesive coating that only sticks to itself under pressure, eliminating the need for heat during the sealing process. This is ideal for heat-sensitive products like chocolates, medical devices, and specific cosmetics.",
     img: "/assets/cold-seal-blisters.png",
-    gallery: ["/assets/cold-seal-blisters.png"],
+    gallery: ["/assets/cold-seal-blisters.png", "/assets/cold-seal-blisters-mockup.png"],
     features: [
       "No heat required for sealing",
       "Protects heat-sensitive items",
@@ -104,7 +104,7 @@ export const products: Product[] = [
     desc: "Traditional heat-sealed blister packs for secure and visible product display.",
     fullDesc: "Hot seal blister packaging is a widely used and reliable method for retail products. A thermoformed plastic blister is heat-sealed to a specially coated backing card, providing a secure, tamper-evident package that showcases the product.",
     img: "/assets/hot-seal-blisters.png",
-    gallery: ["/assets/hot-seal-blisters.png"],
+    gallery: ["/assets/hot-seal-blisters.png", "/assets/hot-seal-blisters-mockup.png"],
     features: [
       "Strong and durable seal",
       "Excellent product visibility",
@@ -125,7 +125,7 @@ export const products: Product[] = [
     desc: "Versatile flexible packaging solutions including stand-up and flat pouches.",
     fullDesc: "Our flexible packaging pouches are available in various formats such as stand-up pouches, flat pouches, and spout pouches. They offer excellent barrier properties to preserve freshness and extend the shelf life of food and non-food products.",
     img: "/assets/pouches-new.png",
-    gallery: ["/assets/pouches-new.png"],
+    gallery: ["/assets/pouches-new.png", "/assets/pouches-new-mockup.png"],
     features: [
       "Excellent moisture and oxygen barrier",
       "Lightweight and space-saving",
@@ -146,7 +146,7 @@ export const products: Product[] = [
     desc: "Cylindrical composite cans for premium packaging of tea, coffee, and gifts.",
     fullDesc: "Composite canister boxes (paper tubes) offer a unique and premium packaging alternative to traditional square boxes. Ideal for dry foods, cosmetics, and promotional items, providing a distinct shelf appeal.",
     img: "/assets/canister-boxes.png",
-    gallery: ["/assets/canister-boxes.png"],
+    gallery: ["/assets/canister-boxes.png", "/assets/canister-boxes-mockup.png"],
     features: [
       "Unique cylindrical shape",
       "Eco-friendly paper construction",
@@ -167,7 +167,7 @@ export const products: Product[] = [
     desc: "Custom printed packaging tape to boost brand visibility on every shipment.",
     fullDesc: "Turn your shipping cartons into a marketing tool with our custom printed promotional tape. High-quality BOPP tape printed with your company logo, handling instructions, or promotional messages ensures secure sealing and brand recognition.",
     img: "/assets/promotional-tape-roll.png",
-    gallery: ["/assets/promotional-tape-roll.png"],
+    gallery: ["/assets/promotional-tape-roll.png", "/assets/promotional-tape-roll-mockup.png"],
     features: [
       "Enhances brand visibility",
       "Strong adhesion for secure sealing",
@@ -189,7 +189,7 @@ export const products: Product[] = [
     desc: "Strong, durable & customizable boxes for safe packaging of goods of all sizes.",
     fullDesc: "Our heavy-duty corrugated boxes are engineered to provide maximum protection for your products during transit, storage, and handling. Manufactured from high-quality kraft paper, these boxes offer superior stacking strength and crush resistance.",
     img: "/assets/corrugated-boxes.png",
-    gallery: ["/assets/corrugated-boxes.png"],
+    gallery: ["/assets/corrugated-boxes.png", "/assets/corrugated-boxes-mockup.png"],
     features: [
       "High crush resistance and stacking strength",
       "100% recyclable and eco-friendly",
