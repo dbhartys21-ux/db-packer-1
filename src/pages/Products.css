@@ -439,7 +439,7 @@
 @media (max-width: 767px) {
   /* A. Slight edge gap — not edge-to-edge, but tighter than 20px */
   .products-main-section .container {
-    padding: 0 12px;
+    padding: 0 16px !important;
   }
 
   /* B. Compact controls bar */

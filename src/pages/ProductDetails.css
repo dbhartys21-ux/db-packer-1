@@ -602,7 +602,7 @@
     padding-bottom: 40px;
   }
   .product-details-page-container > .container {
-    padding: 0 12px;
+    padding: 0 16px !important;
   }
 
   /* Compact breadcrumb */
