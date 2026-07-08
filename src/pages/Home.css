@@ -1719,7 +1719,7 @@
 
   /* Spacing system and container padding */
   .section {
-    padding: 64px 24px !important;
+    padding: 48px 12px !important;
   }
 
   .container {
@@ -1737,7 +1737,7 @@
   .hero-text {
     display: block !important;
     text-align: center !important;
-    padding: 0 16px !important;
+    padding: 0 12px !important;
   }
 
   .hero-iso-badge {
@@ -1811,7 +1811,7 @@
     align-items: center !important;
     justify-content: space-between !important;
     gap: 10px !important;
-    padding: 0 20px !important;
+    padding: 0 12px !important;
     margin-bottom: 24px !important;
   }
 
@@ -1827,7 +1827,7 @@
   }
 
   .carousel-container {
-    padding: 0 20px !important;
+    padding: 0 12px !important;
     position: relative;
   }
 
@@ -1921,7 +1921,7 @@
 
   /* 4. About & Industries Section */
   .about-industries-combined {
-    padding: 48px 20px !important;
+    padding: 48px 12px !important;
   }
 
   .aic-container {
@@ -2008,7 +2008,7 @@
   /* 5. CTA Banner Section */
   .cta-banner-section {
     min-height: 240px !important;
-    padding: 80px 24px !important;
+    padding: 60px 12px !important;
   }
 
   .cta-banner-content {
@@ -2034,7 +2034,7 @@
 
   /* 6. Capabilities Stats Grid */
   .capabilities-section {
-    padding: 48px 20px !important;
+    padding: 48px 12px !important;
   }
 
   .capabilities-section h2 {
@@ -2091,7 +2091,7 @@
 
   /* 7. Process Section Timeline */
   .process-section {
-    padding: 48px 20px !important;
+    padding: 48px 12px !important;
   }
 
   [data-theme="dark"] .process-section {
@@ -2170,7 +2170,7 @@
 
   /* 8. Testimonials Section */
   .testimonials-section {
-    padding: 64px 20px !important;
+    padding: 48px 12px !important;
   }
 
   .testimonials-section h2 {
@@ -2234,7 +2234,7 @@
 
   /* 9. FAQ Section */
   .faq-section {
-    padding: 48px 20px !important;
+    padding: 48px 12px !important;
   }
 
   .faq-header h2 {
@@ -2256,7 +2256,7 @@
 
   /* 10. Bottom CTA Section */
   .cta-section-bottom {
-    padding: 32px 20px 48px 20px !important;
+    padding: 32px 12px 48px 12px !important;
   }
 
   .cta-bottom-card {

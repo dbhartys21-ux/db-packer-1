@@ -213,7 +213,7 @@ const Home = () => {
             <div className="header-divider"></div>
           </div>
           <Link to="/products" className="btn btn-primary products-view-btn">
-            VIEW ALL PRODUCTS <ChevronRight size={16} style={{ marginLeft: '4px' }} />
+            VIEW ALL<ChevronRight size={16} style={{ marginLeft: '4px' }} />
           </Link>
         </div>
 
