@@ -10,9 +10,9 @@ import ProductDetails from './pages/ProductDetails';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingWidgets from './components/FloatingWidgets';
 
-function App() {
+export function AppRoutes() {
   return (
-    <Router>
+    <>
       <ScrollToTop />
       <a href="#main-content" className="skip-link">Skip to Content</a>
       <Navbar />
@@ -28,6 +28,14 @@ function App() {
       </main>
       <FloatingWidgets />
       <Footer />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <AppRoutes />
     </Router>
   );
 }
