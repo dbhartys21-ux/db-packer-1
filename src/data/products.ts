@@ -61,6 +61,24 @@ export const products: Product[] = [
       "/assets/adb_rigid_3.png", 
       "/assets/adb_rigid_4.png"
     ],
+    showcaseImages: ["/assets/rigid-feature-1.png", "/assets/rigid-feature-2.png", "/assets/rigid-feature-3.png"],
+    showcaseFeatures: [
+      {
+        title: "Luxurious Unboxing Experience",
+        description: "Leave a lasting impression from the first touch. Our premium rigid boxes are crafted to provide a high-end unboxing experience that elevates the perceived value of your product.",
+        highlights: ["Luxurious look and premium feel", "Perfect for high-end gifting", "Enhances brand prestige"]
+      },
+      {
+        title: "Unmatched Structural Integrity",
+        description: "Beauty meets strength. Constructed from highly durable materials, these boxes offer extreme structural integrity to protect your most valuable items without compromising on style.",
+        highlights: ["Extremely durable construction", "Protects fragile and premium items", "Long-lasting keepsake quality"]
+      },
+      {
+        title: "Tailored Customization",
+        description: "Designed exactly to your specifications. From custom foam or velvet inserts to elegant magnetic closures and specialized finishing options, we bring your vision to life.",
+        highlights: ["Custom inserts (Foam, Velvet, Cardboard)", "Magnetic closure options", "High-end finishing options"]
+      }
+    ],
     features: [
       "Luxurious look and premium feel",
       "Extremely durable and structural integrity",
@@ -88,6 +106,24 @@ export const products: Product[] = [
       "/assets/adb_label_2.png", 
       "/assets/adb_label_3.png", 
       "/assets/adb_label_4.png"
+    ],
+    showcaseImages: ["/assets/self-label-feature-1.png", "/assets/self-label-feature-2.png", "/assets/self-label-feature-3.png"],
+    showcaseFeatures: [
+      {
+        title: "Vibrant High-Resolution Prints",
+        description: "Capture attention instantly. Our self-adhesive labels are printed using state-of-the-art technology to ensure vibrant colors and sharp, easily readable text for your branding.",
+        highlights: ["Vibrant, high-resolution printing", "Clear product identification", "Available in various shapes and sizes"]
+      },
+      {
+        title: "Durable & Resistant",
+        description: "Built for tough environments. We offer specialized face materials and coatings that provide excellent resistance against water, oils, and general wear and tear.",
+        highlights: ["Water-resistant options", "Oil and smudge resistant", "Long-lasting durability"]
+      },
+      {
+        title: "Strong & Reliable Adhesion",
+        description: "Sticks where you need it to. With options for hot-melt, acrylic, and removable adhesives, our labels bond securely to a vast array of packaging surfaces.",
+        highlights: ["Strong adhesion for different surfaces", "Removable options available", "Perfect for auto-dispensing rolls"]
+      }
     ],
     features: [
       "Vibrant, high-resolution printing",
@@ -119,6 +155,24 @@ export const products: Product[] = [
       "/assets/adb_coldblister_3.png", 
       "/assets/cold-seal-blisters-mockup.png"
     ],
+    showcaseImages: ["/assets/cold-feature-1.png", "/assets/cold-feature-2.png", "/assets/cold-feature-3.png"],
+    showcaseFeatures: [
+      {
+        title: "Heat-Free Sealing",
+        description: "Perfect for temperature-sensitive products. Our cold seal technology provides a secure closure without the need for heat, preserving the integrity of your items.",
+        highlights: ["Protects heat-sensitive items", "Fast and efficient process", "Energy-saving packaging"]
+      },
+      {
+        title: "Crystal Clear Visibility",
+        description: "Showcase your products with brilliant clarity. The transparent blister allows customers to see exactly what they're getting, building trust and appeal.",
+        highlights: ["Excellent product visibility", "Tamper-evident protection", "Enhances retail display"]
+      },
+      {
+        title: "Customizable Backing Cards",
+        description: "Maximize your branding real estate. Our backing cards offer high-quality printing surfaces for vibrant graphics, instructions, and marketing messages.",
+        highlights: ["Vibrant full-color printing", "Various finishes available", "Eco-friendly options"]
+      }
+    ],
     features: [
       "No heat required for sealing",
       "Protects heat-sensitive items",
@@ -142,6 +196,24 @@ export const products: Product[] = [
     fullDesc: "Hot seal blister packaging is a widely used and reliable method for retail products. A thermoformed plastic blister is heat-sealed to a specially coated backing card, providing a secure, tamper-evident package that showcases the product.",
     img: "/assets/hot-seal-blisters.png",
     gallery: ["/assets/hot-seal-blisters.png", "/assets/hot-seal-blisters-mockup.png"],
+    showcaseImages: ["/assets/hot-feature-1.png", "/assets/hot-feature-2.png", "/assets/hot-feature-3.png"],
+    showcaseFeatures: [
+      {
+        title: "Secure Heat Sealing",
+        description: "Ensure your products are completely secure. Our hot seal blister technology creates an exceptionally strong bond between the blister and the backing card, offering reliable tamper-evidence.",
+        highlights: ["Strong and durable seal", "Cost-effective retail packaging", "Deters theft and tampering"]
+      },
+      {
+        title: "High Retail Visibility",
+        description: "Maximize your product's appeal on the shelf. The thermoformed plastic blister offers brilliant clarity while securely encasing the product for consumers to see.",
+        highlights: ["Excellent product visibility", "Peg hole options for hanging", "Enhances brand perception"]
+      },
+      {
+        title: "Premium Backing Cards",
+        description: "Deliver a strong brand message. Our backing cards use specially coated materials to ensure vibrant graphics and essential product information are displayed flawlessly.",
+        highlights: ["High-quality coated materials", "Vibrant full-color printing", "Value-adding finishes available"]
+      }
+    ],
     features: [
       "Strong and durable seal",
       "Excellent product visibility",
@@ -164,6 +236,24 @@ export const products: Product[] = [
     fullDesc: "Our flexible packaging pouches are available in various formats such as stand-up pouches, flat pouches, and spout pouches. They offer excellent barrier properties to preserve freshness and extend the shelf life of food and non-food products.",
     img: "/assets/adb-pouches.png",
     gallery: ["/assets/adb-pouches.png", "/assets/adb-pouches.png"],
+    showcaseImages: ["/assets/pouch-feature-1.png", "/assets/pouch-feature-2.png", "/assets/pouch-feature-3.png"],
+    showcaseFeatures: [
+      {
+        title: "Superior Barrier Protection",
+        description: "Keep your products fresh for longer. Our pouches are constructed with high-quality multi-layer laminates that provide excellent moisture and oxygen barriers, significantly extending shelf life.",
+        highlights: ["Excellent moisture and oxygen barrier", "Preserves freshness and flavor", "Available in multi-layer laminates"]
+      },
+      {
+        title: "Flexible & Space-Saving",
+        description: "Optimize your logistics. Pouches are incredibly lightweight and flexible, dramatically reducing shipping costs and storage space compared to traditional rigid containers.",
+        highlights: ["Lightweight packaging format", "Reduces shipping and storage costs", "Space-saving flat shipment"]
+      },
+      {
+        title: "Ultimate Convenience",
+        description: "Enhance user experience with added functionality. We offer a range of customizations including resealable zippers, tear notches, and spouts for effortless opening and pouring.",
+        highlights: ["Resealable zipper options", "Easy-open tear notches", "Spout fitments available"]
+      }
+    ],
     features: [
       "Excellent moisture and oxygen barrier",
       "Lightweight and space-saving",
@@ -230,6 +320,24 @@ export const products: Product[] = [
     fullDesc: "Turn your shipping cartons into a marketing tool with our custom printed promotional tape. High-quality BOPP tape printed with your company logo, handling instructions, or promotional messages ensures secure sealing and brand recognition.",
     img: "/assets/promotional-tape-roll.png",
     gallery: ["/assets/promotional-tape-roll.png", "/assets/promotional-tape-roll-mockup.png"],
+    showcaseImages: ["/assets/tape-feature-1.png", "/assets/tape-feature-2.png", "/assets/promotional-tape-roll-mockup.png"],
+    showcaseFeatures: [
+      {
+        title: "Boost Brand Visibility",
+        description: "Turn every shipped package into a marketing opportunity. Custom printed promotional tape puts your logo and brand messaging right in front of your customers before they even open the box.",
+        highlights: ["High-visibility custom printing", "Available in up to 3 colors", "Professional unboxing experience"]
+      },
+      {
+        title: "Secure & Tamper-Evident",
+        description: "Protect your shipments. Our high-quality BOPP tape with strong adhesion ensures your cartons stay sealed throughout transit, while custom prints make tampering immediately obvious.",
+        highlights: ["Strong acrylic or hot-melt adhesion", "Provides reliable tamper evidence", "Reduces risk of theft"]
+      },
+      {
+        title: "Versatile & Custom Sized",
+        description: "We provide tape rolls tailored to your operational needs. Available in multiple widths and lengths, ensuring perfect compatibility with your manual or automated dispensers.",
+        highlights: ["Available in 48mm and 72mm widths", "Standard 65m or custom lengths", "Fits standard tape dispensers"]
+      }
+    ],
     features: [
       "Enhances brand visibility",
       "Strong adhesion for secure sealing",
@@ -254,6 +362,24 @@ export const products: Product[] = [
     fullDesc: "Structurally strong, high-impact, printable E-flute boxes built to protect, ship, and impress. Perfect for e-commerce, B2B logistics, and heavy retail products.",
     img: "/assets/adb-corrugated.png",
     gallery: ["/assets/adb-corrugated.png", "/assets/adb-corrugated.png"],
+    showcaseImages: ["/assets/corrugated-feature-1.png", "/assets/corrugated-feature-2.png", "/assets/corrugated-feature-3.png"],
+    showcaseFeatures: [
+      {
+        title: "Maximum Structural Integrity",
+        description: "Built to withstand the toughest logistics. Our corrugated boxes are engineered with high-quality fluting to ensure superior crush resistance and stacking strength.",
+        highlights: ["High crush resistance", "Superior stacking strength", "Ideal for B2B and e-commerce"]
+      },
+      {
+        title: "Eco-Friendly & Sustainable",
+        description: "Commit to a greener future. Our corrugated packaging is 100% recyclable, biodegradable, and made from sustainably sourced materials.",
+        highlights: ["100% recyclable material", "Eco-friendly production", "Reduces carbon footprint"]
+      },
+      {
+        title: "Custom Printed Branding",
+        description: "Your shipping box is your customer's first physical interaction. We offer high-quality custom printing directly on the corrugated surface to make a lasting impression.",
+        highlights: ["High-impact graphic printing", "Inside-out custom printing", "Enhances unboxing experience"]
+      }
+    ],
     features: [
       "High crush resistance and stacking strength",
       "100% recyclable and eco-friendly",

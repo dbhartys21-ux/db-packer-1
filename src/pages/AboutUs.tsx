@@ -119,7 +119,7 @@ const AboutUs = () => {
           <p style={{ maxWidth: '600px', margin: '0 auto 40px', color: 'var(--text-light)' }}>
             We adhere to the strictest quality and environmental standards to guarantee the safety and reliability of our packaging solutions.
           </p>
-          <div className="grid grid-3" style={{ gap: '30px' }}>
+          <div className="grid grid-4" style={{ gap: '30px' }}>
             <motion.div
               className="cert-card"
               initial={{ opacity: 0, y: 20 }}
@@ -154,6 +154,18 @@ const AboutUs = () => {
               <CheckCircle size={48} color="var(--success-color)" style={{ marginBottom: '20px' }} />
               <h3>100% Recyclable</h3>
               <p>Our core corrugated lines are fully recyclable, minimizing environmental footprint.</p>
+            </motion.div>
+
+            <motion.div
+              className="cert-card"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <img src="/Certification/msme.png" alt="MSME Registered" className="cert-img" />
+              <h3>MSME Registered</h3>
+              <p>Recognized as an MSME, promoting local manufacturing and economic development.</p>
             </motion.div>
           </div>
         </div>
