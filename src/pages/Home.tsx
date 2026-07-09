@@ -125,10 +125,10 @@ const Home = () => {
   ];
 
   const testimonials = [
-    { quote: "ADBPack completely transformed our B2B logistics. Their corrugated boxes are the strongest we've used.", name: "John Doe", company: "RetailPlus Ltd", initial: "JD" },
-    { quote: "Outstanding service and 98% on-time delivery. They truly act as a partner in our supply chain.", name: "Sarah Jenkins", company: "TechCorp Logistics", initial: "SJ" },
-    { quote: "The custom stretch films they provide helped us reduce damage during transit by over 40%.", name: "Mike Alvarez", company: "GlobalShipping Co", initial: "MA" },
-    { quote: "Reliable, high-quality, and cost-effective. We couldn't ask for a better packaging partner.", name: "David Chen", company: "FreshFoods Inc", initial: "DC" }
+    { quote: "Shree Distillery Limited, Nepal has procured packaging materials from ADB Pack India for its one of the flagship brands of liquor. Company is fully satisfied with quality of the product and the service of the vendor.", name: "Hari k sampang", company: "Shree Distillery, Nepal", initial: "HK" },
+    { quote: "ADBPack completely transformed our retail presence. Their premium rigid boxes provide the luxurious unboxing experience our customers expect.", name: "Ramesh Sharma", company: "Elegant Lifestyle India", initial: "RS" },
+    { quote: "Outstanding service and 98% on-time delivery. Their custom mono cartons have significantly enhanced our brand visibility on store shelves.", name: "Priya Desai", company: "PureCare Cosmetics", initial: "PD" },
+    { quote: "Reliable, high-quality, and cost-effective. The barrier protection on their stand-up pouches keeps our food products fresh for much longer.", name: "Amit Patel", company: "FreshFoods Naturals", initial: "AP" }
   ];
 
   const industries = [
