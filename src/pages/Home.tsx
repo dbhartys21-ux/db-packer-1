@@ -15,6 +15,7 @@ import pharamaceuticalLogo from '../assets/client-logo/pharamaceutical.png';
 import primusLogo from '../assets/client-logo/primus.png';
 import shreeLogo from '../assets/client-logo/shree.png';
 import since1Logo from '../assets/client-logo/since1.png';
+import hairsmartLogo from '../assets/client-logo/hairsmart.png';
 
 const clientLogos = [
   { name: 'Delbruk', src: delbrukLogo },
@@ -24,7 +25,8 @@ const clientLogos = [
   { name: 'Pharmaceutical', src: pharamaceuticalLogo },
   { name: 'Primus', src: primusLogo },
   { name: 'Shree', src: shreeLogo },
-  { name: 'Since1', src: since1Logo }
+  { name: 'Since1', src: since1Logo },
+  { name: 'HairSmart', src: hairsmartLogo }
 ];
 
 // Counter component for animated stats
@@ -126,10 +128,10 @@ const Home = () => {
   ];
 
   const testimonials = [
+    { quote: "Excellent quality of labels and carton boxes with outstanding printing and sturdy construction. Their attention to detail, consistency, and timely delivery have been highly commendable. We are very satisfied with the products and service.", name: "HairSmart Team", company: "HairSmart Inc.", initial: "HS" },
     { quote: "Shree Distillery Limited, Nepal has procured packaging materials from ADB Pack India for its one of the flagship brands of liquor. Company is fully satisfied with quality of the product and the service of the vendor.", name: "Hari k sampang", company: "Shree Distillery, Nepal", initial: "HK" },
     { quote: "ADBPack completely transformed our retail presence. Their premium rigid boxes provide the luxurious unboxing experience our customers expect.", name: "Ramesh Sharma", company: "Elegant Lifestyle India", initial: "RS" },
-    { quote: "Outstanding service and 98% on-time delivery. Their custom mono cartons have significantly enhanced our brand visibility on store shelves.", name: "Priya Desai", company: "PureCare Cosmetics", initial: "PD" },
-    { quote: "Reliable, high-quality, and cost-effective. The barrier protection on their stand-up pouches keeps our food products fresh for much longer.", name: "Amit Patel", company: "FreshFoods Naturals", initial: "AP" }
+    { quote: "Outstanding service and 98% on-time delivery. Their custom mono cartons have significantly enhanced our brand visibility on store shelves.", name: "Priya Desai", company: "PureCare Cosmetics", initial: "PD" }
   ];
 
   const industries = [

@@ -26,8 +26,7 @@ const AboutUs = () => {
       </div>
 
       <div className="minimal-page-header">
-        <h1>About ADBPack — India's Trusted Packaging Manufacturer Since 2018</h1>
-        <p>Excellence, Quality, and Innovation in Packaging Solutions</p>
+        <h1>About ADBPack</h1>
       </div>
 
       {/* Story section */}

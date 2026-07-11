@@ -24,9 +24,9 @@ const Products = () => {
 
   // Filter logic
   const filteredProducts = products.filter((p) => {
-    const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                          p.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = p.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.desc.toLowerCase().includes(searchQuery.toLowerCase()) ||
+      p.category.toLowerCase().includes(searchQuery.toLowerCase());
     const matchesCategory = selectedCategory === 'All' || p.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -42,14 +42,13 @@ const Products = () => {
       {/* Hero Banner */}
       <section className="products-hero" aria-label="Catalog Hero">
         <div className="products-hero-overlay"></div>
-        <motion.div 
+        <motion.div
           className="container products-hero-content"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1>Custom Packaging Products Catalog — Boxes, Cartons, Pouches & More</h1>
-          <p>Explore our premium range of industrial and retail B2B packaging solutions, engineered for maximum durability, security, and branding appeal.</p>
+          <h1>Custom Packaging Products Catalog</h1>
         </motion.div>
       </section>
 
@@ -57,8 +56,8 @@ const Products = () => {
       <section className="products-main-section">
         <div className="container">
           <div className="page-breadcrumb" style={{ marginBottom: '30px', textAlign: 'left', paddingTop: '0' }}>
-            <Link to="/">Home</Link> 
-            <span style={{ margin: '0 10px', color: 'var(--text-light)', opacity: 0.5 }}>/</span> 
+            <Link to="/">Home</Link>
+            <span style={{ margin: '0 10px', color: 'var(--text-light)', opacity: 0.5 }}>/</span>
             <span style={{ color: 'var(--text-color)', fontWeight: '600' }}>Products</span>
           </div>
 
@@ -68,16 +67,16 @@ const Products = () => {
             <div className="search-and-toggle-wrapper">
               <div className="search-bar-wrapper">
                 <Search className="search-icon" size={20} />
-                <input 
-                  type="text" 
-                  placeholder="Search products, materials, boxes..." 
+                <input
+                  type="text"
+                  placeholder="Search products, materials, boxes..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="search-input"
                   aria-label="Search catalog"
                 />
                 {searchQuery && (
-                  <button 
+                  <button
                     className="clear-search-btn"
                     onClick={() => setSearchQuery('')}
                     aria-label="Clear search"
@@ -86,8 +85,8 @@ const Products = () => {
                   </button>
                 )}
               </div>
-              <button 
-                className="mobile-filter-toggle-btn" 
+              <button
+                className="mobile-filter-toggle-btn"
                 onClick={() => setIsMobileFilterOpen(!isMobileFilterOpen)}
                 aria-label="Toggle Filters"
               >
@@ -127,7 +126,7 @@ const Products = () => {
           </div>
 
           {filteredProducts.length > 0 ? (
-            <motion.div 
+            <motion.div
               layout
               className="premium-products-grid"
             >
@@ -156,7 +155,7 @@ const Products = () => {
                         <h4 className="premium-product-title">{p.title}</h4>
                         <p className="premium-product-desc">{p.desc}</p>
                         <div className="premium-product-btn" role="button">
-                          View Specifications <ArrowRight size={16} style={{ verticalAlign: 'middle', marginLeft: '5px' }}/>
+                          View Specifications <ArrowRight size={16} style={{ verticalAlign: 'middle', marginLeft: '5px' }} />
                         </div>
                       </div>
                     </Link>
