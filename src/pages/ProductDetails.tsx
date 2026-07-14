@@ -197,7 +197,7 @@ const ProductDetails = () => {
               <div className="cta-price-mock-tag">Wholesale B2B Pricing</div>
               <div className="cta-stock-badge">Bulk Orders Available</div>
               <p className="cta-box-desc-text">
-                We manufacture to your custom size requirements. Get factory wholesale rates on your bulk ordering.
+                We are manufacturing partners for your custom size requirements. Get factory wholesale rates on your bulk ordering.
               </p>
               
               <Link to="/quote" className="btn btn-primary btn-quote-full-width">

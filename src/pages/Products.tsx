@@ -179,7 +179,7 @@ const Products = () => {
       <section className="products-cta-section" aria-label="Custom Quote request">
         <div className="container products-cta-content">
           <h2>Need a Custom Solution?</h2>
-          <p>We manufacture highly customized packaging tailored to your exact product dimensions, specific B2B material requirements, and custom brand graphics.</p>
+          <p>We are manufacturing partners for highly customized packaging tailored to your exact product dimensions, specific B2B material requirements, and custom brand graphics.</p>
           <Link to="/quote" className="btn btn-primary products-cta-pill-btn">
             REQUEST A CUSTOM QUOTE
           </Link>

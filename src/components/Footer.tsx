@@ -73,7 +73,7 @@ const Footer = () => {
             <img src={logoImg} alt="ADBPack Logo" className="footer-logo-img" style={{ height: '55px', objectFit: 'contain' }} />
           </div>
           <p className="footer-desc">
-            ADBPack delivers premium packaging solutions engineered for industrial and retail sectors. We manufacture ISO 9001:2015 certified boxes, mono cartons, and flexible packaging direct-to-factory.
+            ADBPack delivers premium packaging solutions engineered for industrial and retail sectors. We are manufacturing partners for ISO 9001:2015 certified boxes, mono cartons, and flexible packaging direct-to-factory.
           </p>
           <div className="social-links">
             <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">

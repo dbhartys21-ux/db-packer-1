@@ -123,7 +123,7 @@ const Home = () => {
   const processSteps = [
     { num: 1, title: "Tell Us", desc: "Your Need", details: "We listen to your specific needs and B2B requirements.", icon: MessageSquare },
     { num: 2, title: "Get Solution", desc: "& Quote", details: "We propose custom designs and a transparent bulk quote.", icon: PackageCheck },
-    { num: 3, title: "We Manufacture", desc: "& Deliver", details: "Precision production at our ISO facility with fast delivery.", icon: Truck },
+    { num: 3, title: "Manufacturing Partners", desc: "& Deliver", details: "Precision production at our ISO facility with fast delivery.", icon: Truck },
     { num: 4, title: "You Grow", desc: "We Support", details: "We provide dedicated post-delivery support for long-term growth.", icon: TrendingUp }
   ];
 
