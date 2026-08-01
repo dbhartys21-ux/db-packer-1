@@ -1,7 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import founderImg from '../assets/latika1.jpeg';
+import founderImg from '../assets/Products images/latika1.jpeg';
 import SEOHead from '../components/SEOHead';
 import './AboutUs.css';
 

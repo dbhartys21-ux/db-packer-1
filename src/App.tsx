@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import ComingSoon from './pages/ComingSoon';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -33,6 +34,12 @@ export function AppRoutes() {
 }
 
 function App() {
+  const isComingSoon = true; // Set to false to reveal the full website
+
+  if (isComingSoon) {
+    return <ComingSoon />;
+  }
+
   return (
     <Router>
       <AppRoutes />
