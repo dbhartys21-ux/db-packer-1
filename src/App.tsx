@@ -34,7 +34,7 @@ export function AppRoutes() {
 }
 
 function App() {
-  const isComingSoon = true; // Set to false to reveal the full website
+  const isComingSoon = false; // Set to false to reveal the full website
 
   if (isComingSoon) {
     return <ComingSoon />;

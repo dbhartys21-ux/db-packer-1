@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Sun, Moon } from 'lucide-react';
 import logoImg from '../assets/adbpack-logo.png';
+import blackLogoImg from '../assets/black_adbpack_logo.png';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './Navbar.css';
@@ -55,7 +56,7 @@ const Navbar = () => {
     <header className={`navbar-container ${shouldBeSolid ? 'scrolled' : ''}`}>
       <div className="navbar-content">
         <Link to="/" className="navbar-logo" aria-label="ADBPack Home">
-          <img src={logoImg} alt="ADBPack Logo" className="navbar-logo-img" />
+          <img src={shouldBeSolid ? blackLogoImg : logoImg} alt="ADBPack Logo" className="navbar-logo-img" />
         </Link>
 
         {/* Desktop Nav Links (Centered) */}
