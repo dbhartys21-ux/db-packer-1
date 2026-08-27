@@ -9,7 +9,6 @@ import './Home.css';
 
 import delbrukLogo from '../assets/client-logo/Delbruk.png';
 import farmacosLogo from '../assets/client-logo/farmacos.png';
-import fixLogo from '../assets/client-logo/fix.png';
 import healthcareLogo from '../assets/client-logo/healthcare.png';
 import pharamaceuticalLogo from '../assets/client-logo/pharamaceutical.png';
 import primusLogo from '../assets/client-logo/primus.png';
@@ -20,7 +19,6 @@ import hairsmartLogo from '../assets/client-logo/hairsmart.png';
 const clientLogos = [
   { name: 'Delbruk', src: delbrukLogo },
   { name: 'Farmacos', src: farmacosLogo },
-  { name: 'Fixderma', src: fixLogo },
   { name: 'Healthcare', src: healthcareLogo },
   { name: 'Pharmaceutical', src: pharamaceuticalLogo },
   { name: 'Primus', src: primusLogo },
