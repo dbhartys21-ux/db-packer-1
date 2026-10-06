@@ -10,6 +10,7 @@ import ContactUs from './pages/ContactUs';
 import ProductDetails from './pages/ProductDetails';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingWidgets from './components/FloatingWidgets';
+import { Analytics } from '@vercel/analytics/react';
 
 export function AppRoutes() {
   return (
@@ -43,6 +44,7 @@ function App() {
   return (
     <Router>
       <AppRoutes />
+      <Analytics />
     </Router>
   );
 }
