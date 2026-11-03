@@ -1,12 +1,41 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowLeft, ArrowRight, ShieldCheck, CheckCircle2, Factory, Calendar, Settings, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { supabase } from '../utils/supabaseClient';
+import { SITE_CONFIG } from '../config/site';
 import SEOHead from '../components/SEOHead';
 import './RequestQuote.css';
 
+const mapParamToProduct = (raw: string | null): string => {
+  if (!raw) return '';
+  const l = raw.toLowerCase();
+  if (l.includes('mono')) return 'Mono Cartons';
+  if (l.includes('rigid')) return 'Rigid Luxury Boxes';
+  if (l.includes('corrugated')) return 'Corrugated Shippers';
+  if (l.includes('pouch')) return 'Flexible Pouches';
+  if (l.includes('blister')) return 'Cold / Hot Seal Blisters';
+  if (l.includes('label')) return 'Self Adhesive Labels';
+  if (l.includes('canister') || l.includes('tube')) return 'Canister Boxes / Paper Tubes';
+  if (l.includes('tape')) return 'Promotional Tapes';
+  return 'Other Custom Packaging';
+};
+
+const mapParamToIndustry = (raw: string | null): string => {
+  if (!raw) return 'E-Commerce / Retail';
+  const l = raw.toLowerCase();
+  if (l.includes('pharma') || l.includes('health')) return 'Healthcare / Pharma';
+  if (l.includes('cosmetic') || l.includes('personal')) return 'Cosmetics & Personal Care';
+  if (l.includes('nutra') || l.includes('supplement') || l.includes('fitness')) return 'Nutraceuticals & Supplements';
+  if (l.includes('liquor') || l.includes('spirit')) return 'Liquor & Spirits';
+  if (l.includes('food') || l.includes('tea') || l.includes('coffee') || l.includes('confection')) return 'Food & Beverage';
+  if (l.includes('gift')) return 'Corporate Gifting';
+  if (l.includes('manufactur')) return 'Manufacturing / Industrial';
+  return 'E-Commerce / Retail';
+};
+
 const RequestQuote = () => {
+  const [searchParams] = useSearchParams();
   const [step, setStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -16,15 +45,27 @@ const RequestQuote = () => {
     firstName: '',
     lastName: '',
     company: '',
-    industry: 'E-Commerce / Retail',
+    industry: mapParamToIndustry(searchParams.get('industry')),
     email: '',
     phone: '',
-    product: '',
+    product: mapParamToProduct(searchParams.get('product')),
     quantity: '',
     dimensions: '',
     customPrinting: 'Yes, custom logo/design',
     additionalInfo: ''
   });
+
+  useEffect(() => {
+    const p = searchParams.get('product');
+    const ind = searchParams.get('industry');
+    if (p || ind) {
+      setFormData((prev) => ({
+        ...prev,
+        ...(p ? { product: mapParamToProduct(p) } : {}),
+        ...(ind ? { industry: mapParamToIndustry(ind) } : {})
+      }));
+    }
+  }, [searchParams]);
 
   const [errors, setErrors] = useState<Record<string, string>>({});
 
@@ -183,7 +224,20 @@ const RequestQuote = () => {
               <CheckCircle2 size={56} className="success-icon" />
               <h2>Quote Request Received!</h2>
               <p>Our sales engineer is already working on your packaging layout specifications. You will receive a detailed wholesale pricing catalog via email within 2-4 business hours.</p>
-              <Link to="/products" className="btn btn-primary">Browse Packaging Catalog</Link>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center', marginTop: '18px' }}>
+                <a
+                  href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}?text=${encodeURIComponent(
+                    `Hi ADBPack, I just submitted a quote request on adbpack.com:\n• Name: ${formData.firstName} ${formData.lastName}\n• Company: ${formData.company} (${formData.industry})\n• Product: ${formData.product}\n• Quantity: ${formData.quantity}\n• Dimensions: ${formData.dimensions || 'To be discussed'}\n• Printing: ${formData.customPrinting}\n• Notes: ${formData.additionalInfo || 'None'}`
+                  )}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn"
+                  style={{ backgroundColor: '#25d366', color: '#fff', fontWeight: 700 }}
+                >
+                  Get Instant Priority Response on WhatsApp
+                </a>
+                <Link to="/products" className="btn btn-primary">Browse Packaging Catalog</Link>
+              </div>
             </motion.div>
           ) : (
             <motion.form 

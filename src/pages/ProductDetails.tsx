@@ -4,7 +4,7 @@ import { Check, Package, ShieldCheck, Truck, ArrowLeft, ZoomIn, X } from 'lucide
 import { motion, AnimatePresence } from 'framer-motion';
 import { getProductById, products } from '../data/products';
 import { productSEO } from '../config/productSEO';
-import { ORG_ID, SITE_URL } from '../config/site';
+import { ORG_ID, SITE_URL, SITE_CONFIG } from '../config/site';
 import { faqSchema, breadcrumbSchema as buildBreadcrumbs } from '../config/schema';
 import SEOHead from '../components/SEOHead';
 import './ProductDetails.css';
@@ -182,11 +182,29 @@ const ProductDetails = () => {
                 We are manufacturing partners for your custom size requirements. Get factory wholesale rates on your bulk ordering.
               </p>
               
-              <Link to="/quote" className="btn btn-primary btn-quote-full-width">
+              <Link
+                to={`/quote?product=${encodeURIComponent(product.title)}`}
+                className="btn btn-primary btn-quote-full-width"
+              >
                 Get a Bulk Quote
               </Link>
-              <Link to="/contact" className="btn btn-secondary btn-sample-request-width" style={{ marginTop: '10px', width: '100%' }}>
-                Request Sample
+              <a
+                href={`https://wa.me/${SITE_CONFIG.contact.whatsapp}?text=${encodeURIComponent(
+                  `Hi ADBPack, I would like a bulk quote for ${product.title} (MOQ: ${product.specifications.MOQ || 'Bulk'}). Please share pricing and lead time.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-quote-full-width"
+                style={{ marginTop: '10px', width: '100%', backgroundColor: '#25d366', color: '#fff', fontWeight: 700 }}
+              >
+                Instant Quote on WhatsApp
+              </a>
+              <Link
+                to={`/contact?interest=sample&product=${encodeURIComponent(product.title)}`}
+                className="btn btn-secondary btn-sample-request-width"
+                style={{ marginTop: '10px', width: '100%' }}
+              >
+                Request Sample Kit
               </Link>
 
               <ul className="cta-benefits-list">

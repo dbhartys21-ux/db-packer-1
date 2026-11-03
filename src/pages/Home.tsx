@@ -134,10 +134,10 @@ const Home = () => {
   ];
 
   const industries = [
-    { name: "Cosmetics &\nHealthcare", img: "/assets/ind-cosmetics.png" },
-    { name: "Fitness Supplements", img: "/assets/ind-fitness.png" },
-    { name: "FMCG &\nLiquors", img: "/assets/ind-fmcg.png" },
-    { name: "Logistics & Pharmaceuticals", img: "/assets/ind-logistics.png" }
+    { name: "Cosmetics &\nPersonal Care", img: "/assets/ind-cosmetics.png", link: "/industries/cosmetic-packaging" },
+    { name: "Fitness Supplements", img: "/assets/ind-fitness.png", link: "/industries/nutraceutical-supplement-packaging" },
+    { name: "FMCG &\nLiquors", img: "/assets/ind-fmcg.png", link: "/industries/liquor-spirits-packaging" },
+    { name: "Logistics & Pharmaceuticals", img: "/assets/ind-logistics.png", link: "/industries/pharmaceutical-packaging" }
   ];
 
   const faqs = [
@@ -320,7 +320,7 @@ const Home = () => {
             <h4 className="section-subtitle">INDUSTRIES WE SERVE</h4>
             <div className="aic-icons-row">
               {industries.map((ind, i) => (
-                <div key={i} className="aic-icon-item">
+                <Link key={i} to={ind.link} className="aic-icon-item" style={{ textDecoration: 'none' }}>
                   <div className="aic-icon-box">
                     <img src={ind.img} alt={ind.name.replace('\n', ' ')} className="ind-img" loading="lazy" />
                   </div>
@@ -329,8 +329,13 @@ const Home = () => {
                       <span key={idx}>{part}<br /></span>
                     ))}
                   </span>
-                </div>
+                </Link>
               ))}
+            </div>
+            <div style={{ marginTop: '18px' }}>
+              <Link to="/industries" style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--primary-color)' }}>
+                Explore all 6 industries &amp; specs &rarr;
+              </Link>
             </div>
           </div>
         </div>

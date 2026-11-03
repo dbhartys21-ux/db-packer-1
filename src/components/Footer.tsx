@@ -112,8 +112,10 @@ const Footer = () => {
           <h4 className="footer-heading">QUICK LINKS</h4>
           <ul className="footer-links">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About Us</Link></li>
             <li><Link to="/products">Products Catalog</Link></li>
+            <li><Link to="/industries">Industries We Serve</Link></li>
+            <li><Link to="/export">Global Export Desk</Link></li>
+            <li><Link to="/about">About Us</Link></li>
             <li><Link to="/quote">Request Quote</Link></li>
             <li><Link to="/contact">Contact Us</Link></li>
           </ul>

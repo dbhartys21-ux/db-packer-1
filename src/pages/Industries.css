@@ -1,0 +1,318 @@
+/* Shared styles for Industry Hub, Industry Detail, and Global Export pages */
+.industry-page-container {
+  padding-top: 80px;
+}
+
+.industry-hero {
+  background: var(--gradient-hero);
+  color: #ffffff;
+  padding: 70px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.industry-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 18px;
+}
+
+.industry-hero h1 {
+  color: #ffffff;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  max-width: 880px;
+  margin-bottom: 16px;
+}
+
+.industry-hero-sub {
+  color: #cbd5e1;
+  font-size: 1.12rem;
+  max-width: 760px;
+  margin-bottom: 28px;
+  line-height: 1.65;
+}
+
+.industry-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-whatsapp-cta {
+  background-color: #25d366;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.btn-whatsapp-cta:hover {
+  background-color: #1ebe5d;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Direct Answer / AEO Summary Box */
+.aeo-answer-box {
+  background: var(--surface-1);
+  border-left: 4px solid var(--primary-color);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  padding: 24px 28px;
+  margin: 36px 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.aeo-answer-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary-color);
+  margin-bottom: 6px;
+  display: block;
+}
+
+.aeo-answer-box p {
+  margin: 0;
+  font-size: 1.04rem;
+  line-height: 1.7;
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+/* Industry Hub Grid */
+.industries-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 28px;
+  margin-top: 30px;
+}
+
+.industry-hub-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.industry-hub-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary-color);
+}
+
+.industry-hub-card-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.industry-hub-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex-shrink: 0;
+}
+
+.industry-hub-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Advantages Grid */
+.industry-advantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 28px;
+}
+
+.industry-adv-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.industry-adv-card h3 {
+  font-size: 1.12rem;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.industry-adv-card p {
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--text-light);
+}
+
+/* AEO Spec Comparison Table */
+.aeo-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  background: var(--white);
+  box-shadow: var(--shadow-sm);
+  margin-top: 20px;
+}
+
+.aeo-spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 680px;
+}
+
+.aeo-spec-table th,
+.aeo-spec-table td {
+  padding: 15px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.93rem;
+}
+
+.aeo-spec-table thead th {
+  background: var(--surface-1);
+  color: var(--text-color);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+.aeo-spec-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.aeo-spec-table tbody tr:hover {
+  background: var(--surface-3);
+}
+
+/* Recommended Products Row */
+.industry-products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 22px;
+  margin-top: 24px;
+}
+
+.industry-prod-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.industry-prod-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
+}
+
+.industry-prod-img {
+  height: 170px;
+  background: var(--surface-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.industry-prod-img img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.industry-prod-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.industry-prod-body h3 {
+  font-size: 1.08rem;
+  margin-bottom: 6px;
+}
+
+.industry-prod-body p {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  margin-bottom: 14px;
+  flex: 1;
+}
+
+/* FAQ Cards */
+.industry-faq-list {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.industry-faq-card {
+  background: var(--white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+}
+
+.industry-faq-card h3 {
+  font-size: 1.06rem;
+  margin-bottom: 8px;
+  color: var(--text-color);
+}
+
+.industry-faq-card p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+/* Bottom Conversion Banner */
+.industry-bottom-cta {
+  background: var(--gradient-cta);
+  color: #ffffff;
+  border-radius: var(--radius-lg);
+  padding: 44px 36px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 50px;
+}
+
+.industry-bottom-cta h2 {
+  color: #ffffff;
+  margin-bottom: 8px;
+  font-size: 1.85rem;
+}
+
+.industry-bottom-cta p {
+  color: #e0e7ff;
+  margin: 0;
+  max-width: 600px;
+}
+

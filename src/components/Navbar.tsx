@@ -44,8 +44,10 @@ const Navbar = () => {
 
   const navLinks = [
     { path: '/', label: 'Home' },
-    { path: '/about', label: 'About Us' },
     { path: '/products', label: 'Products' },
+    { path: '/industries', label: 'Industries' },
+    { path: '/export', label: 'Global Export' },
+    { path: '/about', label: 'About Us' },
     { path: '/contact', label: 'Contact Us' },
   ];
 

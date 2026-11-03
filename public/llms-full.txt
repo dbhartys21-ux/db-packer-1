@@ -1,0 +1,311 @@
+# ADBPack — Complete Technical & Commercial Reference (llms-full.txt)
+
+> Official full-context documentation for AI answer engines (ChatGPT, Perplexity, Gemini, Claude, Copilot).
+> Canonical Website: https://adbpack.com
+> Summary File: https://adbpack.com/llms.txt
+
+## 1. Verified Entity Profile
+- **Business Name:** ADBPack
+- **Founder & CEO:** Latika Upadhyay (Founded 2018)
+- **Manufacturing Location:** Trilokpuri, New Delhi, India (110091)
+- **Plant Size & Capacity:** 50,000 sq.ft facility | 10 million+ units monthly capacity
+- **Certifications:** ISO 9001:2015, GeM Registered, MSME Registered
+- **Phone / WhatsApp:** +91 97114 92120, +91 88825 67498
+- **Email:** info@adbpack.com
+- **Instagram:** https://www.instagram.com/adbpack/
+- **Global Export:** Exports custom packaging from New Delhi, India to Nepal (including Shree Distillery Limited), UAE, Saudi Arabia, Qatar, Oman, Africa, Europe, UK, USA, Canada, and Australia.
+
+## 2. Complete Product Catalog & Specifications
+
+### Mono Cartons (https://adbpack.com/product/mono-cartons)
+High-quality cartons with precise folds, crisp edges, and high-definition print clarity. Perfect for cosmetics, FMCG, and pharmaceuticals.
+**Key Features:**
+- High-quality offset printing
+- Various finishes (Gloss, Matte, UV, Embossing)
+- Customizable shapes and die-cuts
+- Lightweight and cost-effective
+- Eco-friendly and recyclable
+**Technical Specifications:**
+- **MOQ:** 2000 Sheets
+- **Paper Quality:** SBS, Duplex, Kraft
+- **Standard Finishes:** Matt Lamination, Gloss Lamination, Velvet Lamination, Holographic Lamination
+- **Value-adding Finishes:** Spot UV, Foil Stamping, Embossing, Debossing, PVC Window
+- **Technical Finishes:** Drip-off, Matt and Gloss, Metallic, Online UV, Aqueous coating
+**Product FAQs:**
+- **Q: What paperboard grades does ADBPack use for custom mono cartons?**
+  A: ADBPack manufactures mono cartons using virgin SBS (Solid Bleached Sulfate / FBB) board for pharmaceuticals and cosmetics, coated Duplex board for cost-effective FMCG retail packaging, and natural Kraft board for eco-friendly brands, typically ranging from 250 GSM to 450 GSM.
+- **Q: What is the minimum order quantity (MOQ) for printed mono cartons?**
+  A: Our standard MOQ for custom printed mono cartons starts at 2,000 sheets, which yields several thousand cartons depending on your box flat size (ups per sheet). Pricing is customized based on dimensions, board GSM, and finishing.
+- **Q: Can ADBPack supply mono cartons for international export orders?**
+  A: Yes. ADBPack exports custom folding cartons from India to brands in the Middle East, Europe, North America, Africa, and South Asia. Cartons are shipped flat-packed, shrink-wrapped, and palletized in export-grade master shippers.
+
+### Rigid Boxes (https://adbpack.com/product/rigid-boxes)
+Premium, rigid-structure boxes made for a luxurious unboxing experience. Perfect for high-end products, gifting, corporate gifting, and luxury D2C brands.
+**Key Features:**
+- Luxurious look and premium feel
+- Extremely durable and structural integrity
+- Custom inserts available (Foam, Velvet, Cardboard)
+- Magnetic closure options
+- High-end finishing options
+**Technical Specifications:**
+- **MOQ:** 1000 Boxes
+- **Paper Quality:** Art Paper, Textured Papers
+- **Standard Finishes:** Matt Lamination, Gloss Lamination, Velvet Lamination, Holographic Lamination
+- **Value-adding Finishes:** Spot UV, Foil Stamping, Embossing, PVC Window
+- **Technical Finishes:** Metallic, Online UV, Matt and Gloss
+**Product FAQs:**
+- **Q: What types of luxury rigid boxes does ADBPack manufacture?**
+  A: ADBPack produces magnetic flap closure boxes, collapsible rigid boxes, two-piece lift-off lid (telescope) boxes, shoulder-neck boxes, and slide drawer boxes using 1.5mm to 3mm greyboard wrapped in specialty art or textured papers.
+- **Q: Do you provide custom inserts inside rigid boxes?**
+  A: Yes. We engineer die-cut EVA foam, velvet-flocked trays, satin linings, molded pulp, and paperboard inserts tailored to hold glass bottles, cosmetics, electronics, or gift sets securely during international transit.
+- **Q: What is the MOQ and lead time for custom rigid boxes?**
+  A: Our MOQ for custom rigid boxes is 1,000 units. Production typically takes 10 to 15 business days after structural sample and artwork approval.
+
+### Self Adhesive Labels (https://adbpack.com/product/self-adhesive-labels)
+High-quality self-adhesive labels available in rolls and sheets. We offer a wide range of face materials and adhesives suitable for various applications, including food packaging, cosmetics, logistics, and industrial use.
+**Key Features:**
+- Vibrant, high-resolution printing
+- Various shapes and sizes
+- Water-resistant and oil-resistant options
+- Strong adhesion for different surfaces
+- Available on rolls for auto-dispensing
+**Technical Specifications:**
+- **MOQ:** 5000 Labels
+- **Material Quality:** Chromo Paper, BOPP, PE, PET
+- **Standard Finishes:** Matt Lamination, Gloss Lamination
+- **Value-adding Finishes:** Foil Stamping, Spot UV, Embossing
+- **Technical Finishes:** Online UV, Aqueous coating
+- **Adhesive:** Hot-melt, Acrylic, Removable
+- **Format:** Rolls or Sheets
+**Product FAQs:**
+- **Q: Are ADBPack roll labels compatible with automatic labeling machines?**
+  A: Yes. We supply die-cut self-adhesive labels on standardized core rolls (76mm / 3-inch or custom cores) with specified unwind directions and gap spacing for high-speed automatic bottle, jar, vial, and pouch applicators.
+- **Q: Which label material is waterproof and oil-resistant?**
+  A: White, clear, and metallized BOPP (polypropylene), PE, and PET film labels with gloss/matte lamination or UV varnish are waterproof, oil-resistant, and smudge-proof—ideal for cosmetics, hair oils, beverages, and chilled products.
+- **Q: What adhesive types do you offer?**
+  A: We offer permanent acrylic, high-tack rubber hot-melt (for curved or low-surface-energy containers), deep-freeze adhesives, and clean-peel removable adhesives.
+
+### Cold Seal Blisters (https://adbpack.com/product/cold-seal-blisters)
+Pressure-sensitive blister cards designed for heat-free sealing. Perfect for pharmaceuticals, confectionery, and delicate FMCG products.
+**Key Features:**
+- No heat required for sealing
+- Protects heat-sensitive items
+- Fast and efficient packaging process
+- Clear visibility of the product
+- Tamper-evident packaging
+**Technical Specifications:**
+- **MOQ:** 3000-5000 Sheets
+- **Paper Quality:** SBS, Duplex
+- **Standard Finishes:** Matt Lamination, Gloss Lamination, Velvet Lamination, Holographic Lamination
+- **Value-adding Finishes:** Spot UV, Foil Stamping, Embossing
+- **Technical Finishes:** Drip-off, Matt and Gloss, Metallic, Online UV, Aqueous coating
+**Product FAQs:**
+- **Q: How does cold seal blister packaging work?**
+  A: Cold seal blister cards use a specialized cohesive coating that bonds only to itself under pressure, requiring zero heat during sealing. This protects heat-sensitive pharmaceuticals, probiotics, chocolates, and biologics from thermal degradation.
+- **Q: What is the MOQ and board specification for cold seal blister cards?**
+  A: Our MOQ is 3,000 to 5,000 sheets printed on high-stiffness SBS or Duplex board, available with security features like holographic lamination, foil stamping, and tamper-evident perforations.
+
+### Hot Seal Blisters (https://adbpack.com/product/hot-seal-blisters)
+Hot seal blister packaging is a widely used and reliable method for retail products. A thermoformed plastic blister is heat-sealed to a specially coated backing card, providing a secure, tamper-evident package that showcases the product.
+**Key Features:**
+- Strong and durable seal
+- Excellent product visibility
+- Cost-effective retail packaging
+- Deters theft and tampering
+- Peg hole options for retail hanging
+**Technical Specifications:**
+- **Paper Quality:** SBS, Duplex
+- **Standard Finishes:** Gloss Lamination
+- **Value-adding Finishes:** Foil Stamping, Embossing
+- **Technical Finishes:** Online UV, Aqueous coating
+**Product FAQs:**
+- **Q: What products are best suited for hot seal blister packaging?**
+  A: Hot seal blister cards are ideal for retail hanging items such as toothbrushes, razors, batteries, electronics accessories, hardware tools, stationery, automotive parts, and cosmetics that require crystal-clear visibility and theft deterrence.
+- **Q: Do your blister backing cards bond with both PVC and PET blisters?**
+  A: Yes. We apply formulated heat-sealable blister varnish compatible with PVC, PET, and PETG thermoformed blisters to ensure a fiber-tearing tamper-evident seal.
+
+### Pouches (https://adbpack.com/product/pouches)
+Our flexible packaging pouches are available in various formats such as stand-up pouches, flat pouches, and spout pouches. They offer excellent barrier properties to preserve freshness and extend the shelf life of food and non-food products.
+**Key Features:**
+- Excellent moisture and oxygen barrier
+- Lightweight and space-saving
+- Customizable with zippers, tear notches, and spouts
+- High-impact graphic printing
+- Available in multi-layer laminates
+**Technical Specifications:**
+- **MOQ:** 5000 Pouches
+- **Material:** PET/PE, BOPP/PE, Aluminum Foil laminates
+- **Standard Finishes:** Matt Finish, Gloss Finish, Holographic
+- **Value-adding Finishes:** Spot UV, Foil Stamping, Clear Window
+- **Types:** Stand-up, Three-side seal, Center seal, Spout Pouches
+- **Printing:** Rotogravure up to 9 colors
+**Product FAQs:**
+- **Q: What laminate structures are used for food and supplement pouches?**
+  A: ADBPack manufactures multi-layer barrier pouches using PET/PE, BOPP/PE, PET/AL/PE (aluminum foil), and metallized PET structures that protect food, coffee, tea, spices, and nutraceutical powders from moisture, oxygen, and UV light.
+- **Q: What pouch styles and closures are available?**
+  A: We produce stand-up pouches (doypacks), flat 3-side seal pouches, center-seal gusseted bags, and spout pouches for liquids, with options for press-to-close zippers, tear notches, euro hang holes, degassing valves, and clear windows.
+- **Q: What is the MOQ for custom printed flexible pouches?**
+  A: The minimum order quantity starts at 5,000 pouches per SKU with up to 9-color high-definition rotogravure printing in matte, gloss, or holographic finishes.
+
+### Canister Boxes (https://adbpack.com/product/canister-boxes)
+Composite canister boxes (paper tubes) offer a unique and premium packaging alternative to traditional square boxes. Ideal for dry foods, cosmetics, and promotional items, providing a distinct shelf appeal.
+**Key Features:**
+- Unique cylindrical shape
+- Eco-friendly paper construction
+- Airtight inner lining options available
+- Custom printed outer label
+- Metal, plastic, or paper lid options
+**Technical Specifications:**
+- **MOQ:** 2000 Canisters
+- **Paper Quality:** Kraft Board, Art Paper Wrap, Textured Paper
+- **Standard Finishes:** Matt Lamination, Gloss Lamination, Velvet Lamination
+- **Value-adding Finishes:** Foil Stamping, Spot UV, Embossing, Debossing
+- **Diameter:** Customizable (50mm - 150mm)
+- **Lid Type:** Tinplate, Plastic, Paper cap
+**Product FAQs:**
+- **Q: Are paper tube canisters airtight and food-safe?**
+  A: Yes. Our composite canisters can be lined with food-grade aluminum foil barriers and sealed with peel-off membrane lids plus tinplate or plastic overcaps to keep tea, coffee, spices, dry fruits, and nutritional powders fresh.
+- **Q: What diameters and heights can ADBPack customize?**
+  A: We manufacture custom diameters from 50mm to 150mm and custom heights to match your fill weight or bottle dimensions, with 360-degree printed wraps, foil stamping, embossing, and velvet lamination. MOQ starts at 2,000 canisters.
+
+### Promotional Tape Roll (https://adbpack.com/product/promotional-tape-roll)
+Turn your shipping cartons into a marketing tool with our custom printed promotional tape. High-quality BOPP tape printed with your company logo, handling instructions, or promotional messages ensures secure sealing and brand recognition.
+**Key Features:**
+- Enhances brand visibility
+- Strong adhesion for secure sealing
+- Provides tamper evidence
+- Customized with up to 3 colors
+- Available in various widths
+**Technical Specifications:**
+- **MOQ:** 500 Rolls
+- **Material:** BOPP with Acrylic/Hot-melt adhesive
+- **Standard Finishes:** Gloss Finish, Matt Finish
+- **Width:** 48mm, 72mm
+- **Length:** 65m or custom
+- **Printing:** Custom brand logo up to 3 colors
+**Product FAQs:**
+- **Q: What is the minimum order quantity for custom logo printed tape?**
+  A: Our MOQ for custom printed BOPP packaging tape is 500 rolls, available in 48mm (2-inch) and 72mm (3-inch) widths and 65m or custom roll lengths with up to 3-color brand printing.
+- **Q: Does branded tape help prevent pilferage during shipping?**
+  A: Yes. Custom printed BOPP tape acts as a tamper-evident seal because cannot be replaced with generic clear or brown tape if opened in transit, protecting e-commerce and export shipments.
+
+### Corrugated Boxes (https://adbpack.com/product/corrugated-boxes)
+Structurally strong, high-impact, printable E-flute boxes built to protect, ship, and impress. Perfect for e-commerce, B2B logistics, and heavy retail products.
+**Key Features:**
+- High crush resistance and stacking strength
+- 100% recyclable and eco-friendly
+- Available in Single, Double, and Triple Wall
+- Custom printing options available for branding
+- Shipped flat to save storage space
+**Technical Specifications:**
+- **MOQ:** 2000 Sheets
+- **Structure:** 3 Ply, 4 Ply, 5 Ply
+- **Standard Finishes:** Matt Lamination, Gloss Lamination, Velvet Lamination, Holographic Lamination
+- **Value-adding Finishes:** Spot UV, Foil Stamping, Embossing, PVC Window
+- **Technical Finishes:** Drip-off, Matt and Gloss, Metallic, Aqueous coating, Online UV
+**Product FAQs:**
+- **Q: Should I choose 3-ply, 5-ply, or E-flute corrugated boxes?**
+  A: Choose E-flute 3-ply boxes for D2C mailer boxes and retail display packaging where crisp offset print quality matters. Choose B-flute or C-flute 3-ply for standard shipping up to 10 kg, and 5-ply double-wall corrugated boxes for heavy industrial goods or international export master cartons.
+- **Q: Can you print inside and outside of corrugated mailer boxes?**
+  A: Yes. ADBPack offers full-color offset litho-laminated and flexographic printing on both the exterior and interior of corrugated boxes, along with matte, gloss, or aqueous protective coatings.
+- **Q: Are ADBPack corrugated boxes recyclable and export-compliant?**
+  A: All our corrugated boxes are 100% recyclable and manufactured under ISO 9001:2015 quality controls with high bursting factor (BF) and edge crush test (ECT) strength suitable for domestic and international sea/air freight.
+
+## 3. Industry-Specific Packaging Solutions
+
+### Pharmaceutical & Healthcare Packaging Manufacturer in India (https://adbpack.com/industries/pharmaceutical-packaging)
+ADBPack manufactures ISO 9001:2015 certified secondary and primary-adjacent pharmaceutical packaging in New Delhi, India—including virgin SBS mono cartons with Braille embossing and batch-coding zones, heat-free cold seal blister backing cards, hot seal blister packs, and high-tack roll labels for vials, bottles, and syringes.
+
+| Packaging Format | Material Grade | Finishes & Features | MOQ | Best For |
+|---|---|---|---|---|
+| Pharma Mono Cartons | 280–400 GSM Virgin SBS (FBB) / Coated Duplex Board | Aqueous coating, Braille embossing, holographic foil, unvarnished inkjet zone | 2,000 Sheets | Tablet strips, syrup bottles, ointments, ampoule trays, diagnostic kits |
+| Cold Seal Blister Cards | 300–400 GSM SBS / Duplex with Cohesive Latex Coating | Zero-heat pressure sealing, push-through or peelable backing | 3,000 Sheets | Heat-sensitive biologics, probiotics, softgels, medical devices |
+| Hot Seal Blister Cards | 300–450 GSM SBS / Duplex with Heat-Seal Varnish | Bonds to PVC/PVDC/PET thermoformed blisters, tamper-evident | 3,000 Sheets | OTC medicines, syringes, dental products, inhalers |
+| Pharma Roll Labels | Chromo Paper, Clear/White BOPP, PET (Roll form, 76mm core) | High-tack mandrel adhesive for small-diameter vials, cryo/moisture resistant | 5,000 Labels | Injectable vials, eye-drop bottles, syrup bottles, blood collection tubes |
+
+- **Q: Can ADBPack manufacture pharmaceutical cartons compatible with automatic cartoning machines?**
+  A: Yes. Our pharmaceutical mono cartons are die-cut on precision flatbed die-cutters and folded on automated folder-gluers with controlled crease-recovery ratios, ensuring jam-free operation on high-speed blister and bottle cartoning lines.
+- **Q: Do you offer Braille embossing and anti-counterfeit finishes on medicine boxes?**
+  A: Yes. We provide Accubraille/rotary and flatbed Braille embossing, security holograms, micro-text, Spot UV, and tamper-evident glue flaps for domestic and export pharmaceutical packaging.
+- **Q: What is the minimum order quantity for custom pharma packaging?**
+  A: Our MOQ starts at 2,000 sheets for printed mono cartons, 3,000 sheets for blister backing cards, and 5,000 labels for roll-fed self-adhesive labels.
+
+### Cosmetics, Beauty & Personal Care Packaging Manufacturer in India (https://adbpack.com/industries/cosmetic-packaging)
+ADBPack manufactures custom cosmetic and personal care packaging in India—specializing in 300–400 GSM virgin SBS mono cartons with soft-touch velvet lamination, hot foil stamping, Spot UV, and 3D embossing, alongside magnetic rigid gift boxes, cylindrical paper canisters, and waterproof/oil-resistant BOPP roll labels.
+
+| Packaging Format | Material Grade | Finishes & Features | MOQ | Best For |
+|---|---|---|---|---|
+| Skincare & Serum Mono Cartons | 300–400 GSM Virgin SBS / Metallized PET Laminated Board | Velvet matte lamination, hot foil stamping, Spot UV, internal bottle flute insert | 2,000 Sheets | Face serums, creams, sunscreens, lipsticks, essential oils, hair growth oils |
+| Perfume & Gift Set Rigid Boxes | 1.8mm–2.5mm Greyboard + 150 GSM Art/Textured Wrap | Magnetic closure or shoulder-neck box, die-cut EVA foam / velvet cavity | 1,000 Boxes | Eau de Parfum bottles, festival beauty kits, influencer PR boxes |
+| Oil & Water-Resistant Labels | 50–60 Micron Clear, White, or Silver Metallized BOPP / PE | Matte/Gloss UV varnish, foil accents, permanent acrylic adhesive | 5,000 Labels | Shampoo bottles, body washes, cosmetic jars, dropper bottles |
+| Eco Paper Tube Canisters | Spiral-wound Kraft + Printed Art Paper Wrap (50–120mm dia.) | 360° offset print, foil stamping, rolled paper or tinplate lid | 2,000 Canisters | Perfume bottles, bath salts, organic skincare jars, candles |
+
+- **Q: How do you prevent glass serum and perfume bottles from breaking inside mono cartons?**
+  A: We design mono cartons with integrated inner E-flute corrugated liners or custom die-cut cardboard partitions (neck-lock inserts) that suspend the glass bottle away from the outer walls during e-commerce shipping.
+- **Q: Which label material will not peel or smudge when exposed to cosmetic oils?**
+  A: We recommend BOPP (Biaxially Oriented Polypropylene) or PET film labels laminated with a protective matte or gloss film. Unlike paper stickers, BOPP labels are 100% waterproof and impervious to carrier oils, alcohols, and bathroom humidity.
+- **Q: Can we order matching mono cartons, rigid PR boxes, and bottle labels from ADBPack?**
+  A: Yes. Manufacturing your folding cartons, rigid gift boxes, labels, and printed D2C mailer boxes under one roof at ADBPack guarantees identical Pantone color matching across your entire brand line.
+
+### Nutraceutical, Protein & Fitness Supplement Packaging Manufacturer (https://adbpack.com/industries/nutraceutical-supplement-packaging)
+ADBPack supplies custom packaging for nutraceutical, sports nutrition, and Ayurvedic brands—producing multi-layer PET/AL/PE barrier stand-up pouches with resealable zippers, foil-lined cylindrical paper canisters, holographic mono cartons, cold seal blister packs, and wrap-around HDPE jar labels.
+
+| Packaging Format | Material Grade | Finishes & Features | MOQ | Best For |
+|---|---|---|---|---|
+| Stand-Up Protein & Superfood Pouches | PET / Aluminum Foil (AL) or MET-PET / Food-Grade PE | Up to 9-color rotogravure, matte/spot gloss, powder-proof zipper, tear notch | 5,000 Pouches | Whey protein (500g–2kg), creatine, collagen, greens powders, hydration mixes |
+| Composite Paper Canisters | Rigid Kraft Tube + Food-Grade Aluminum Foil Inner Liner | Peel-off aluminum membrane + tinplate/plastic lid, 360° metallic print | 2,000 Canisters | Pre-workout powders, herbal teas, effervescent या gummy supplements |
+| Nutraceutical Mono Cartons | 320–400 GSM SBS / Metallized Polyester Laminated Board | Holographic lamination, drip-off UV, embossing, security seal flaps | 2,000 Sheets | Capsule bottles, vitamin strips, energy bars, Ayurvedic drops |
+| HDPE Tub & Bottle Roll Labels | White / Silver Metallized BOPP with High-Tack Adhesive | Scuff-resistant UV coating, metallic foil highlights, waterproof | 5,000 Labels | 1kg–5lb protein jars, vitamin gummy bottles, shaker bottles |
+
+- **Q: Why are flexible stand-up pouches replacing plastic tubs for protein and supplement brands?**
+  A: Multi-layer barrier stand-up pouches reduce packaging cost by 40–60%, cut warehouse storage and freight volume by up to 80% before filling, and provide equal moisture/oxygen barrier protection via aluminum foil or metallized PET inner layers.
+- **Q: Do your labels stick reliably to low-surface-energy HDPE supplement jars?**
+  A: Yes. Standard acrylic adhesives can lift at the edges on HDPE/PP plastic tubs; we use high-tack rubber hot-melt or specialized permanent adhesives formulated specifically for curved polyolefin supplement containers.
+
+### Liquor, Wine & Spirits Packaging Manufacturer & Exporter (https://adbpack.com/industries/liquor-spirits-packaging)
+ADBPack is a proven liquor and spirits packaging manufacturer and exporter in New Delhi, India—supplying high-burst-strength mono cartons, litho-laminated fluted cartons, cylindrical composite canisters, and luxury rigid presentation boxes to distilleries in India and international markets including Shree Distillery Limited in Nepal.
+
+| Packaging Format | Material Grade | Finishes & Features | MOQ | Best For |
+|---|---|---|---|---|
+| 750ml / 180ml Liquor Mono Cartons | 350–450 GSM High-BF Duplex / SBS or E-Flute Litho-Laminated | MET-PET lamination, drip-off UV, gold foil stamping, crash-lock bottom | 2,000 Sheets | Whisky, rum, vodka, gin retail cartons (180ml, 375ml, 750ml) |
+| Cylindrical Bottle Canister Tubes | Heavy-Duty Spiral Kraft Core + Printed Art/Textured Wrap | Tinplate base and cap, foil stamping, velvet touch, 75–110mm diameter | 2,000 Canisters | Single malt whisky, craft gin, reserve wines, duty-free editions |
+| Luxury Collector Rigid Boxes | 2.5mm–3.0mm Greyboard + Textured Paper / Velvet Lining | Magnetic clamshell or hinged neck box with custom EVA foam bottle + glass recess | 1,000 Boxes | Limited-edition spirits, corporate gifting sets with tasting glasses |
+| 5-Ply Export Master Shippers | 5-Ply High-ECT Virgin Kraft Corrugated + Partitions | Die-cut 6-cell / 12-cell interlocking bottle dividers, pallet-ready | 2,000 Boxes | Distillery-to-distributor palletized transport & export freight |
+
+- **Q: Does ADBPack export liquor packaging outside India?**
+  A: Yes. ADBPack actively exports custom liquor cartons, labels, and bottle packaging from New Delhi, India—including supplying flagship brand packaging to Shree Distillery Limited in Nepal as well as beverage brands across South Asia, the Middle East, and Africa.
+- **Q: How do you prevent heavy 750ml glass bottles from breaking through the bottom of a carton?**
+  A: For 750ml and 1000ml glass bottles, we use either 400+ GSM high-stiffness board with a reinforced Himes/crash-lock bottom or litho-laminated E-flute micro-corrugated board that provides superior vertical load capacity.
+
+### Food, Tea, Coffee & Confectionery Packaging Manufacturer in India (https://adbpack.com/industries/food-confectionery-packaging)
+ADBPack manufactures custom food, beverage, and confectionery packaging in India—offering virgin food-grade SBS mono cartons, multi-layer aroma-lock stand-up pouches, aluminum-foil-lined cylindrical canisters for tea and coffee, cold seal chocolate blister packs, and luxury rigid gift boxes for mithai, dry fruits, and chocolates.
+
+| Packaging Format | Material Grade | Finishes & Features | MOQ | Best For |
+|---|---|---|---|---|
+| Tea, Coffee & Spice Canisters | Spiral Kraft Tube + Food-Grade Aluminum Foil Inner Lining | Airtight peel-off membrane + tinplate/plastic lid, matte/foil outer wrap | 2,000 Canisters | Loose-leaf tea, specialty coffee, matcha, spices, dry fruits, cookies |
+| Resealable Food Pouches | PET/PE, BOPP/MET-PET/PE, or PET/AL/PE Food-Grade Laminate | Up to 9-color rotogravure, press-to-close zipper, clear product window | 5,000 Pouches | Snacks, namkeen, roasted coffee, dry fruits, spices, ready-to-eat mixes |
+| FMCG Food Mono Cartons | 280–380 GSM Virgin SBS / Kraft / Duplex Board | PVC window patching, aqueous food-safe coating, auto-bottom or tuck-end | 2,000 Sheets | Cereal boxes, tea bag cartons, spice boxes, frozen foods, pasta, chocolates |
+| Gourmet Confectionery Rigid Boxes | 2.0mm Greyboard + Art/Textured Paper + Food-Safe Cavity Tray | Magnetic closure, gold foil stamping, partitioned chocolate/dry-fruit tray | 1,000 Boxes | Artisanal chocolates, baklava, luxury mithai, gourmet gift hampers |
+
+- **Q: Are your paper tube canisters suitable for direct or secondary packaging of tea and coffee?**
+  A: Yes. Our canisters feature a food-grade aluminum foil interior liner and can be fitted with a hermetic peel-off membrane lid plus a tinplate overcap to protect tea leaves, coffee beans, and spices from humidity and aroma loss.
+- **Q: Can you add transparent windows to food mono cartons and pouches?**
+  A: Yes. We offer die-cut PVC/PET window patching on mono cartons and demetallized clear viewing windows on stand-up pouches so shoppers can see the product inside.
+
+### E-Commerce, D2C & Retail Logistics Packaging Manufacturer (https://adbpack.com/industries/ecommerce-d2c-packaging)
+ADBPack manufactures custom e-commerce and D2C packaging in New Delhi, India—including inside-out printed E-flute corrugated mailer boxes, high-ECT 3-ply and 5-ply shipping cartons, luxury rigid subscription boxes, product labels, and custom logo-printed BOPP tamper-evident packaging tape.
+
+| Packaging Format | Material Grade | Finishes & Features | MOQ | Best For |
+|---|---|---|---|---|
+| Printed E-Flute D2C Mailer Boxes | 3-Ply E-Flute Corrugated + 250 GSM Duplex/Kraft Top Liner | Offset litho-laminated, inside-out printing, matte/gloss lamination, self-locking | 2,000 Sheets | D2C subscription boxes, apparel, cosmetics kits, electronics, footwear |
+| 3-Ply & 5-Ply Shipping Cartons (RSC) | 150–250 GSM High-BF Virgin/Recycled Kraft Liners (B/C Flute) | 1–2 color flexo logo & handling icons, high stacking ECT, 100% recyclable | 2,000 Boxes | Amazon FBA / Quick-Commerce replenishment, bulk B2B shipments, heavy goods |
+| Custom Printed BOPP Packaging Tape | 48mm / 72mm BOPP Film + High-Tack Acrylic or Hot-Melt Adhesive | Up to 3-color brand logo & tamper-warning print, 65m or custom length | 500 Rolls | Sealing e-commerce parcels & master export cartons with tamper evidence |
+| Shipping & Barcode Roll Labels | Chromo Paper / Direct Thermal / Waterproof BOPP on Rolls | Strong permanent adhesive for corrugated kraft surfaces, smudge-proof | 5,000 Labels | SKU barcode stickers, thank-you seals, return address & hazard labels |
+
+- **Q: What is the difference between an E-flute mailer box and a standard 3-ply shipping carton?**
+  A: An E-flute mailer box uses a thin, dense 1.5mm flute profile laminated with an offset-printed sheet—giving magazine-sharp graphics and a rigid, self-locking unboxing experience. A standard 3-ply RSC shipping carton uses thicker B or C flutes (3–4mm) with flexo printing for economical outer transit protection.
+- **Q: Can small D2C brands start with branded packaging tape before ordering custom boxes?**
+  A: Yes. Custom logo-printed BOPP tape has an MOQ of just 500 rolls and immediately transforms plain brown corrugated boxes into branded, tamper-evident parcels.
+
+## 4. Global Export Desk (https://adbpack.com/export)
+ADBPack supports EXW, FOB (ICD Tughlakabad / Mundra / Nhava Sheva), CIF, and DDP international shipments via DHL/FedEx air express, air cargo, LCL consolidated ocean freight, and 20ft/40ft HQ full container loads (FCL) with ISPM-15 fumigated pallets and moisture-barrier shrink wrapping.

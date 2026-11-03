@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SITE_CONFIG } from '../config/site';
@@ -9,13 +9,28 @@ import SEOHead from '../components/SEOHead';
 import './ContactUs.css';
 
 const ContactUs = () => {
+  const [searchParams] = useSearchParams();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    interest: '',
-    message: ''
+    interest: searchParams.get('interest') || '',
+    message: searchParams.get('product')
+      ? `Hi ADBPack, I would like to inquire about / request a sample for ${searchParams.get('product')}.`
+      : ''
   });
+
+  useEffect(() => {
+    const interest = searchParams.get('interest');
+    const prod = searchParams.get('product');
+    if (interest || prod) {
+      setFormData((prev) => ({
+        ...prev,
+        ...(interest ? { interest } : {}),
+        ...(prod ? { message: `Hi ADBPack, I would like to inquire about / request a sample for ${prod}.` } : {})
+      }));
+    }
+  }, [searchParams]);
 
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [submitError, setSubmitError] = useState<string | null>(null);

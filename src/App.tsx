@@ -8,6 +8,9 @@ import Products from './pages/Products';
 import RequestQuote from './pages/RequestQuote';
 import ContactUs from './pages/ContactUs';
 import ProductDetails from './pages/ProductDetails';
+import Industries from './pages/Industries';
+import IndustryDetails from './pages/IndustryDetails';
+import ExportPage from './pages/ExportPage';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingWidgets from './components/FloatingWidgets';
 import { Analytics } from '@vercel/analytics/react';
@@ -24,6 +27,9 @@ export function AppRoutes() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/products" element={<Products />} />
           <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/industries" element={<Industries />} />
+          <Route path="/industries/:slug" element={<IndustryDetails />} />
+          <Route path="/export" element={<ExportPage />} />
           <Route path="/quote" element={<RequestQuote />} />
           <Route path="/contact" element={<ContactUs />} />
         </Routes>

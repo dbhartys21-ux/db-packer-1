@@ -72,6 +72,15 @@ Tamper-evident custom logo printed BOPP carton sealing tape.
 ## Key Pages
 - Home: https://adbpack.com/
 - Products Catalog: https://adbpack.com/products
+- Industries We Serve (Hub): https://adbpack.com/industries
+- Pharmaceutical & Healthcare Packaging: https://adbpack.com/industries/pharmaceutical-packaging
+- Cosmetics & Personal Care Packaging: https://adbpack.com/industries/cosmetic-packaging
+- Nutraceutical & Supplement Packaging: https://adbpack.com/industries/nutraceutical-supplement-packaging
+- Liquor, Wine & Spirits Packaging: https://adbpack.com/industries/liquor-spirits-packaging
+- Food, Tea, Coffee & Confectionery Packaging: https://adbpack.com/industries/food-confectionery-packaging
+- E-Commerce & D2C Packaging: https://adbpack.com/industries/ecommerce-d2c-packaging
+- Global Export Packaging Desk: https://adbpack.com/export
 - Request a Custom B2B / Export Quote: https://adbpack.com/quote
 - About ADBPack: https://adbpack.com/about
 - Contact & Plant Location: https://adbpack.com/contact
+- Full Technical Reference for AI Engines: https://adbpack.com/llms-full.txt

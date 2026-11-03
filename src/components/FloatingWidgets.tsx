@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Phone, Mail, MessageCircle, ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SITE_CONFIG } from '../config/site';
@@ -11,6 +12,7 @@ const WhatsAppIcon = ({ size = 22 }) => (
 );
 
 const FloatingWidgets = () => {
+  const location = useLocation();
   const [showScrollTop, setShowScrollTop] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const scrollTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -47,11 +49,15 @@ const FloatingWidgets = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // Safe phone parsing for multiple values
-  const phoneArray = SITE_CONFIG.contact.phone.split(',');
-  const primaryPhoneRaw = phoneArray[0].trim();
-  const primaryPhoneDialable = primaryPhoneRaw.replace(/[^0-9+]/g, '');
-  const primaryPhoneWhatsapp = primaryPhoneRaw.replace(/[^0-9]/g, '');
+  const primaryPhoneDialable = SITE_CONFIG.contact.phones[0].e164;
+  const primaryPhoneWhatsapp = SITE_CONFIG.contact.whatsapp;
+  const whatsappContextMsg = location.pathname.startsWith('/product/')
+    ? `Hi ADBPack, I'm viewing ${location.pathname.replace('/product/', '').replace(/-/g, ' ')} on adbpack.com and would like a quote.`
+    : location.pathname.startsWith('/industries/')
+    ? `Hi ADBPack, I'm viewing ${location.pathname.replace('/industries/', '').replace(/-/g, ' ')} on adbpack.com and would like a quote.`
+    : location.pathname === '/export'
+    ? `Hi ADBPack Export Desk, I'm looking to import custom printed packaging from India.`
+    : `Hi ADBPack, I visited adbpack.com and would like a custom packaging quote.`;
 
   return (
     <div className="floating-widgets-container">
@@ -111,7 +117,7 @@ const FloatingWidgets = () => {
           
           {/* WhatsApp Chat Widget */}
           <a 
-            href={`https://wa.me/${primaryPhoneWhatsapp}`} 
+            href={`https://wa.me/${primaryPhoneWhatsapp}?text=${encodeURIComponent(whatsappContextMsg)}`} 
             target="_blank" 
             rel="noopener noreferrer" 
             className="floating-btn whatsapp-btn" 
