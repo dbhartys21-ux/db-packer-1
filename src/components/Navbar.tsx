@@ -46,7 +46,7 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/products', label: 'Products' },
     { path: '/industries', label: 'Industries' },
-    { path: '/export', label: 'Global Export' },
+    { path: '/export', label: 'Export' },
     { path: '/about', label: 'About Us' },
     { path: '/contact', label: 'Contact Us' },
   ];
