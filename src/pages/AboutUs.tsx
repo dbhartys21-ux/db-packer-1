@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import founderImg from '../assets/Products images/latika1.jpeg';
 import SEOHead from '../components/SEOHead';
+import { organizationSchema, breadcrumbSchema } from '../config/schema';
+import { SITE_URL, ORG_ID } from '../config/site';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -16,10 +18,25 @@ const AboutUs = () => {
   return (
     <div className="page-container about-page-container">
       <SEOHead
-        title="About ADBPack — ISO 9001:2015 Certified Packaging Manufacturer, Delhi India"
-        description="Learn about ADBPack, India's trusted ISO 9001:2015 certified packaging manufacturer. Founded in 2018, we operate a 50,000 sq.ft facility producing 10M+ units monthly. Led by founder Latika Upadhyay."
+        title="About ADBPack — ISO 9001:2015 Packaging Manufacturer & Exporter in New Delhi, India"
+        description="Founded in 2018 by Latika Upadhyay, ADBPack is an ISO 9001:2015 certified B2B packaging manufacturer & exporter in New Delhi with a 50,000 sq.ft plant and 10M+ monthly unit capacity."
         canonicalPath="/about"
-        keywords="packaging company Delhi, ISO certified packaging manufacturer, about ADBPack, packaging manufacturer India, Latika Upadhyay ADBPack"
+        keywords="packaging company Delhi, ISO certified packaging manufacturer India, packaging exporter India, about ADBPack, Latika Upadhyay ADBPack"
+        schema={[
+          organizationSchema(),
+          {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Latika Upadhyay",
+            "jobTitle": "Founder & CEO",
+            "worksFor": { "@id": ORG_ID },
+            "image": `${SITE_URL}/founder.png`
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "About Us", path: "/about" }
+          ])
+        ]}
       />
       <div className="page-breadcrumb">
         <Link to="/">Home</Link> &bull; About Us

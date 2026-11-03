@@ -40,8 +40,8 @@ const RequestQuote = () => {
     }
     if (!formData.phone.trim()) {
       errs.phone = 'Phone is required';
-    } else if (!/^\+?[0-9\s-]{10,15}$/.test(formData.phone.replace(/[^0-9+]/g, ''))) {
-      errs.phone = 'Invalid phone number';
+    } else if (!/^\+?[0-9\s-]{7,18}$/.test(formData.phone.replace(/[^0-9+]/g, ''))) {
+      errs.phone = 'Enter a valid phone / WhatsApp number';
     }
     return errs;
   };
@@ -258,9 +258,13 @@ const RequestQuote = () => {
                         className="dq-select"
                       >
                         <option>E-Commerce / Retail</option>
-                        <option>Food &amp; Beverage</option>
-                        <option>Manufacturing / Industrial</option>
                         <option>Healthcare / Pharma</option>
+                        <option>Cosmetics &amp; Personal Care</option>
+                        <option>Nutraceuticals &amp; Supplements</option>
+                        <option>Food &amp; Beverage</option>
+                        <option>Liquor &amp; Spirits</option>
+                        <option>Corporate Gifting</option>
+                        <option>Manufacturing / Industrial</option>
                         <option>Other</option>
                       </select>
                     </div>
@@ -281,7 +285,7 @@ const RequestQuote = () => {
                       {errors.email && <span className="dq-error">{errors.email}</span>}
                     </div>
                     <div className="dq-group">
-                      <label htmlFor="quote-phone">Phone Number *</label>
+                      <label htmlFor="quote-phone">Phone / WhatsApp Number (with Country Code) *</label>
                       <input 
                         type="tel" 
                         id="quote-phone"
@@ -289,7 +293,7 @@ const RequestQuote = () => {
                         value={formData.phone}
                         onChange={handleInputChange}
                         className={`dq-input ${errors.phone ? 'error' : ''}`} 
-                        placeholder="+91 Phone number"
+                        placeholder="e.g. +91 97114 92120 or +1 / +971 / +44"
                         required 
                       />
                       {errors.phone && <span className="dq-error">{errors.phone}</span>}
@@ -319,14 +323,15 @@ const RequestQuote = () => {
                         required
                       >
                         <option value="" disabled>Select product type...</option>
-                        <option value="Boxes">Corrugated Shippers</option>
-                        <option value="Cartons">Mono Cartons</option>
-                        <option value="Boxes">Rigid Luxury Boxes</option>
-                        <option value="Labels">Self Adhesive Labels</option>
-                        <option value="Blisters">Blister Packaging</option>
-                        <option value="Pouches">Flexible Pouches</option>
-                        <option value="Tapes">Promotional Tapes</option>
-                        <option value="Other">Other Custom Packaging</option>
+                        <option value="Mono Cartons">Mono Cartons</option>
+                        <option value="Rigid Luxury Boxes">Rigid Luxury Boxes</option>
+                        <option value="Corrugated Shippers">Corrugated Shippers</option>
+                        <option value="Flexible Pouches">Flexible Pouches</option>
+                        <option value="Cold / Hot Seal Blisters">Cold / Hot Seal Blister Packaging</option>
+                        <option value="Self Adhesive Labels">Self Adhesive Labels</option>
+                        <option value="Canister Boxes / Paper Tubes">Canister Boxes / Paper Tubes</option>
+                        <option value="Promotional Tapes">Promotional Tapes</option>
+                        <option value="Other Custom Packaging">Other Custom Packaging</option>
                       </select>
                       {errors.product && <span className="dq-error">{errors.product}</span>}
                     </div>

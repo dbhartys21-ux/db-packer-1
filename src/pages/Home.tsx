@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronRight, ArrowLeft, ArrowRight, Quote, Plus, Minus, CheckCircle, Factory, ShieldCheck, Trophy, MousePointerClick, MessageSquare, PackageCheck, Truck, TrendingUp, Headset } from 'lucide-react';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { products } from '../data/products';
 import { SITE_CONFIG } from '../config/site';
+import { organizationSchema, websiteSchema, localBusinessSchema, faqSchema } from '../config/schema';
 import SEOHead from '../components/SEOHead';
 import './Home.css';
 
@@ -144,111 +145,20 @@ const Home = () => {
     { q: "Do you offer custom branding and printing?", a: "Yes, we provide full customization services, including custom sizes, multi-color high-quality flexographic and offset printing, and branding for all boxes, tapes, and cartons." },
     { q: "How fast is your typical delivery time?", a: "Standard inventory products are dispatched within 24-48 hours. Custom printed or die-cut packaging orders typically take 7-10 business days depending on design approval." },
     { q: "Are your packaging materials eco-friendly?", a: "We prioritize sustainability. Many of our corrugated boxes are made from recycled kraft paper and are 100% recyclable and biodegradable." },
-    { q: "Do you supply samples before production?", a: "Yes, we can provide digital mockups and physical pre-production samples upon request to ensure dimensions and printing align perfectly with your standards." }
+    { q: "Do you supply samples before production?", a: "Yes, we can provide digital mockups and physical pre-production samples upon request to ensure dimensions and printing align perfectly with your standards." },
+    { q: "Does ADBPack export packaging outside India?", a: "Yes. ADBPack exports custom printed packaging from New Delhi, India to international brands. We have supplied liquor packaging to Shree Distillery in Nepal and handle export-ready documentation, palletised and container-load shipments by sea and air to the Middle East, Africa, Europe, North America and South Asia." },
+    { q: "How do I get a price for custom packaging?", a: "Pricing is quotation-based because it depends on size, material, print colours, finishes and quantity. Share your requirements through the quote form, email info@adbpack.com or WhatsApp +91 97114 92120 and our team responds with a detailed quotation, usually within one business day." },
+    { q: "Why source packaging from India?", a: "Indian packaging manufacturers like ADBPack combine competitive pricing, ISO 9001:2015 quality systems, offset and rotogravure printing, and a strong paperboard supply base, which makes India a cost-effective alternative to China for cartons, rigid boxes, labels and flexible packaging." }
   ];
 
   return (
     <div className="home-page">
       <SEOHead
-        title="ADBPack — Custom Packaging Solutions Manufacturer in India | ISO 9001:2015 Certified"
-        description="ADBPack is India's trusted ISO 9001:2015 certified packaging manufacturer. Custom corrugated boxes, mono cartons, rigid boxes, pouches & blister packaging. Get a free B2B quote today."
+        title="ADBPack | Custom Packaging Manufacturer & Exporter in India | ISO 9001:2015"
+        description="ISO 9001:2015 certified custom packaging manufacturer & exporter from New Delhi, India. Mono cartons, rigid boxes, corrugated boxes, pouches, blisters & labels for pharma, cosmetics, FMCG & D2C brands worldwide. Get a free quote."
         canonicalPath="/"
-        keywords="packaging solutions India, custom packaging manufacturer, corrugated boxes, mono cartons, rigid boxes, blister packaging, pouches, B2B packaging supplier, packaging company Delhi, wholesale packaging India"
-        schema={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "ADBPack",
-            "url": "https://adbpack.com",
-            "logo": "https://adbpack.com/fevicon.png",
-            "description": "ISO 9001:2015 certified B2B packaging manufacturer in India specializing in corrugated boxes, mono cartons, rigid boxes, pouches, blister packaging, self-adhesive labels, canister boxes, and promotional tape.",
-            "foundingDate": "2018",
-            "founder": {
-              "@type": "Person",
-              "name": "Latika Upadhyay"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Trilokpuri",
-              "addressLocality": "New Delhi",
-              "addressRegion": "Delhi",
-              "postalCode": "110091",
-              "addressCountry": "IN"
-            },
-            "contactPoint": [
-              {
-                "@type": "ContactPoint",
-                "telephone": "+91-9711492120",
-                "contactType": "sales",
-                "availableLanguage": ["English", "Hindi"]
-              },
-              {
-                "@type": "ContactPoint",
-                "telephone": "+91-9711492120",
-                "contactType": "customer service",
-                "availableLanguage": ["English", "Hindi"]
-              }
-            ],
-            "email": "info@adbpack.com",
-            "numberOfEmployees": {
-              "@type": "QuantitativeValue",
-              "minValue": 50
-            },
-            "areaServed": "IN",
-            "knowsAbout": [
-              "Corrugated Box Manufacturing",
-              "Mono Carton Printing",
-              "Rigid Box Packaging",
-              "Flexible Pouch Packaging",
-              "Blister Packaging",
-              "Self Adhesive Labels",
-              "Custom Packaging Solutions"
-            ]
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "ADBPack - Custom Packaging Manufacturer",
-            "image": "https://adbpack.com/facility.png",
-            "@id": "https://adbpack.com/#localbusiness",
-            "url": "https://adbpack.com",
-            "telephone": "+91-9711492120",
-            "email": "info@adbpack.com",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Trilokpuri",
-              "addressLocality": "New Delhi",
-              "addressRegion": "Delhi",
-              "postalCode": "110091",
-              "addressCountry": "IN"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": 28.6282,
-              "longitude": 77.2973
-            },
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-              "opens": "09:00",
-              "closes": "18:00"
-            },
-            "priceRange": "$$",
-            "description": "ISO 9001:2015 certified packaging manufacturer in New Delhi, India. Custom corrugated boxes, mono cartons, rigid boxes, pouches, blister packaging, labels and tapes for B2B clients."
-          },
-          {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqs.map(faq => ({
-              "@type": "Question",
-              "name": faq.q,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.a
-              }
-            }))
-          }
-        ]}
+        keywords="custom packaging manufacturer India, packaging exporter India, packaging supplier from India, mono carton manufacturer, rigid box manufacturer, corrugated box manufacturer, pharmaceutical packaging India, cosmetic packaging manufacturer, private label packaging, packaging company Delhi"
+        schema={[organizationSchema(), websiteSchema(), localBusinessSchema(), faqSchema(faqs)]}
       />
       {/* 1. Unified Hero Section */}
       <section className="hero-section" aria-label="Welcome Banner">
@@ -275,10 +185,10 @@ const Home = () => {
               <span>ISO 9001:2015 Certified Company</span>
             </div>
             <h1>
-              <span className="sr-only">Custom Packaging Solutions Manufacturer in India — </span>
+              <span className="sr-only">ADBPack: Custom Packaging Manufacturer &amp; Exporter from India. </span>
               SMART PACKAGING.<br />STRONGER FUTURE.
             </h1>
-            <p>Reliable. Sustainable. Custom packaging solutions engineered for every industry.</p>
+            <p>ISO-certified custom packaging manufacturer &amp; exporter from India. Mono cartons, rigid boxes, corrugated boxes, pouches, blisters &amp; labels for brands across India, the Middle East, Africa, Europe &amp; North America.</p>
             <div className="hero-actions">
               <Link to="/quote" className="btn btn-primary hero-btn">
                 REQUEST A QUOTE <ChevronRight size={18} style={{ marginLeft: '4px' }} />
@@ -299,7 +209,7 @@ const Home = () => {
           </div>
           <div className="top-strip-right">
             <span>Call Our Experts:</span>
-            <a href={`tel:${SITE_CONFIG.contact.phone.split(',')[0].trim()}`} className="top-strip-btn">
+            <a href={`tel:${SITE_CONFIG.contact.phones[0].e164}`} className="top-strip-btn">
               CALL NOW
             </a>
           </div>
@@ -360,7 +270,7 @@ const Home = () => {
 
       {/* 4. Trusted By Logo Marquee */}
       <section className="trusted-ticker-section" aria-label="Trusted partners">
-        <p className="ticker-label">Trusted by leading enterprises pan-India</p>
+        <p className="ticker-label">Trusted by brands in India &amp; abroad</p>
         <div className="ticker-container">
           <div className="ticker-track">
             {[...Array(2)].map((_, i) => (
@@ -564,21 +474,19 @@ const Home = () => {
                       {openFaq === i ? <Minus size={18} strokeWidth={2.5} /> : <Plus size={18} strokeWidth={2.5} />}
                     </div>
                   </button>
-                  <AnimatePresence initial={false}>
-                    {openFaq === i && (
-                      <motion.div
-                        className="faq-answer-wrapper"
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: 'auto', opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                      >
-                        <div className="faq-answer-content">
-                          <p>{faq.a}</p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                  {/* Answer is always in the DOM so crawlers & AI engines can read it; collapsed visually */}
+                  <motion.div
+                    className="faq-answer-wrapper"
+                    initial={false}
+                    animate={{ height: openFaq === i ? 'auto' : 0, opacity: openFaq === i ? 1 : 0 }}
+                    transition={{ duration: 0.3, ease: 'easeInOut' }}
+                    style={{ overflow: 'hidden' }}
+                    aria-hidden={openFaq !== i}
+                  >
+                    <div className="faq-answer-content">
+                      <p>{faq.a}</p>
+                    </div>
+                  </motion.div>
                 </div>
               ))}
             </div>

@@ -4,19 +4,20 @@ import { Check, Package, ShieldCheck, Truck, ArrowLeft, ZoomIn, X } from 'lucide
 import { motion, AnimatePresence } from 'framer-motion';
 import { getProductById, products } from '../data/products';
 import { productSEO } from '../config/productSEO';
+import { ORG_ID, SITE_URL } from '../config/site';
+import { faqSchema, breadcrumbSchema as buildBreadcrumbs } from '../config/schema';
 import SEOHead from '../components/SEOHead';
 import './ProductDetails.css';
 
 const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
-  const [product, setProduct] = useState(id ? getProductById(id) : undefined);
-  const [activeImage, setActiveImage] = useState<string>('');
+  const initialProduct = id ? getProductById(id) : undefined;
+  const [product, setProduct] = useState(initialProduct);
+  const [activeImage, setActiveImage] = useState<string>(initialProduct ? initialProduct.img : '');
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
-  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setLoading(true);
     if (id) {
       const found = getProductById(id);
       if (found) {
@@ -26,13 +27,10 @@ const ProductDetails = () => {
         navigate('/products');
       }
     }
-    // Simulate page load for skeleton shimmer effect
-    const timer = setTimeout(() => setLoading(false), 400);
-    return () => clearTimeout(timer);
   }, [id, navigate]);
 
   if (!product) {
-    return <div className="page-container" style={{ padding: '100px', textAlign: 'center' }}>Loading...</div>;
+    return <div className="page-container" style={{ padding: '100px', textAlign: 'center' }}>Product not found.</div>;
   }
 
   // Get related products from same category or different
@@ -40,31 +38,34 @@ const ProductDetails = () => {
     .filter((p) => p.id !== product.id && (p.category === product.category || p.category === 'Boxes'))
     .slice(0, 3);
 
-  // JSON-LD Structured SEO Schema Markup
+  // Get SEO metadata for this product (falls back to generic if not configured)
+  const seo = productSEO[product.id] || {
+    title: `${product.title} — Custom Packaging Manufacturer & Exporter India | ADBPack`,
+    description: product.fullDesc,
+    keywords: `${product.title}, ${product.category}, packaging manufacturer India, ADBPack`,
+    faqs: []
+  };
+
+  // JSON-LD Structured SEO Schema Markup (no Offer without price since B2B pricing is quote-based)
   const schemaMarkup = {
-    "@context": "https://schema.org/",
+    "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${SITE_URL}/product/${product.id}#product`,
     "name": product.title,
-    "image": product.gallery.map(img => `https://adbpack.com${img}`),
+    "url": `${SITE_URL}/product/${product.id}`,
+    "image": [product.img, ...product.gallery.filter(g => g !== product.img)].map(img => `${SITE_URL}${img}`),
     "description": product.fullDesc,
     "brand": {
       "@type": "Brand",
       "name": "ADBPack"
     },
     "manufacturer": {
-      "@type": "Organization",
-      "name": "ADBPack",
-      "url": "https://adbpack.com"
+      "@id": ORG_ID
     },
     "category": product.category,
-    "offers": {
-      "@type": "Offer",
-      "availability": "https://schema.org/InStock",
-      "priceCurrency": "INR",
-      "seller": {
-        "@type": "Organization",
-        "name": "ADBPack"
-      }
+    "countryOfOrigin": {
+      "@type": "Country",
+      "name": "India"
     },
     "additionalProperty": Object.entries(product.specifications).map(([name, value]) => ({
       "@type": "PropertyValue",
@@ -73,23 +74,16 @@ const ProductDetails = () => {
     }))
   };
 
-  // BreadcrumbList schema for product navigation
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://adbpack.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Products", "item": "https://adbpack.com/products" },
-      { "@type": "ListItem", "position": 3, "name": product.title, "item": `https://adbpack.com/product/${product.id}` }
-    ]
-  };
+  const breadcrumbSchema = buildBreadcrumbs([
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    { name: product.title, path: `/product/${product.id}` }
+  ]);
 
-  // Get SEO metadata for this product (falls back to generic if not configured)
-  const seo = productSEO[product.id] || {
-    title: `${product.title} — Custom Packaging | ADBPack`,
-    description: product.fullDesc,
-    keywords: `${product.title}, ${product.category}, packaging, ADBPack`
-  };
+  const schemas: object[] = [schemaMarkup, breadcrumbSchema];
+  if (seo.faqs && seo.faqs.length > 0) {
+    schemas.push(faqSchema(seo.faqs));
+  }
 
   return (
     <div className="page-container product-details-page-container">
@@ -97,9 +91,10 @@ const ProductDetails = () => {
         title={seo.title}
         description={seo.description}
         canonicalPath={`/product/${product.id}`}
-        ogImage={`https://adbpack.com${product.img}`}
+        ogImage={`${SITE_URL}${product.img}`}
+        ogType="product"
         keywords={seo.keywords}
-        schema={[schemaMarkup, breadcrumbSchema]}
+        schema={schemas}
       />
 
       <div className="container">
@@ -117,20 +112,7 @@ const ProductDetails = () => {
           </Link>
         </div>
 
-        {loading ? (
-          /* Shimmer Skeleton Screen Loader */
-          <div className="product-skeleton-screen">
-            <div className="skeleton-image-gallery"></div>
-            <div className="skeleton-info-block">
-              <div className="skeleton-line title"></div>
-              <div className="skeleton-line tag"></div>
-              <div className="skeleton-line text"></div>
-              <div className="skeleton-line text"></div>
-              <div className="skeleton-line button"></div>
-            </div>
-          </div>
-        ) : (
-          /* Top Product Info block */
+        {/* Top Product Info block */}
           <div className="product-top-section">
             {/* Left Column: Interactive Image Gallery */}
             <div className="product-gallery-block">
@@ -208,14 +190,13 @@ const ProductDetails = () => {
               </Link>
 
               <ul className="cta-benefits-list">
-                <li><Check size={16} className="benefit-icon" /> ISO 9001 quality check</li>
-                <li><Truck size={16} className="benefit-icon" /> Timely delivery across India</li>
+                <li><Check size={16} className="benefit-icon" /> ISO 9001:2015 quality check</li>
+                <li><Truck size={16} className="benefit-icon" /> Pan-India &amp; Global Export Delivery</li>
                 <li><Package size={16} className="benefit-icon" /> Factory direct wholesale</li>
-                <li><ShieldCheck size={16} className="benefit-icon" /> Custom branding option</li>
+                <li><ShieldCheck size={16} className="benefit-icon" /> Custom branding &amp; die-lines</li>
               </ul>
             </div>
           </div>
-        )}
 
         {/* Bottom Details Section: Full description & specifications */}
         <div className="product-bottom-specifications-section">
@@ -304,6 +285,21 @@ const ProductDetails = () => {
             </ul>
           </div>
         </div>
+
+        {/* Product-specific FAQs for B2B buyers & AI answer engines */}
+        {seo.faqs && seo.faqs.length > 0 && (
+          <div className="product-faqs-section" style={{ marginTop: '60px', padding: '40px', backgroundColor: 'var(--surface-1)', borderRadius: 'var(--radius-lg)', border: '1px solid var(--border-color)' }}>
+            <h2 style={{ marginBottom: '24px', fontSize: '1.75rem' }}>Frequently Asked Questions — {product.title}</h2>
+            <div style={{ display: 'grid', gap: '20px' }}>
+              {seo.faqs.map((faq, idx) => (
+                <div key={idx} style={{ padding: '20px', backgroundColor: 'var(--white)', borderRadius: 'var(--radius)', border: '1px solid var(--border-color)' }}>
+                  <h3 style={{ fontSize: '1.1rem', marginBottom: '8px', color: 'var(--text-color)' }}>{faq.q}</h3>
+                  <p style={{ margin: 0, color: 'var(--text-light)', lineHeight: 1.65 }}>{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (

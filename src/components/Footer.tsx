@@ -73,18 +73,37 @@ const Footer = () => {
             <img src={logoImg} alt="ADBPack Logo" className="footer-logo-img" style={{ height: '55px', objectFit: 'contain' }} />
           </div>
           <p className="footer-desc">
-            ADBPack delivers premium packaging solutions engineered for industrial and retail sectors. We are manufacturing partners for ISO 9001:2015 certified boxes, mono cartons, and flexible packaging direct-to-factory.
+            ADBPack is an ISO 9001:2015 certified B2B packaging manufacturer &amp; global exporter in New Delhi, India — supplying mono cartons, rigid boxes, corrugated boxes, blisters, labels, and pouches direct from factory.
           </p>
+          <div className="footer-contact-mini" style={{ fontSize: '0.88rem', color: 'var(--text-light)', marginBottom: '14px', lineHeight: 1.7 }}>
+            <div><strong>Location:</strong> {SITE_CONFIG.contact.address.join(' ')}</div>
+            <div>
+              <strong>Phone / WhatsApp:</strong>{' '}
+              {SITE_CONFIG.contact.phones.map((p, idx) => (
+                <span key={p.e164}>
+                  {idx > 0 && ', '}
+                  <a href={`tel:${p.e164}`} style={{ textDecoration: 'underline' }}>{p.display}</a>
+                </span>
+              ))}
+            </div>
+            <div><strong>Email:</strong> <a href={`mailto:${SITE_CONFIG.contact.email}`} style={{ textDecoration: 'underline' }}>{SITE_CONFIG.contact.email}</a></div>
+          </div>
           <div className="social-links">
-            <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
-              <Facebook size={18} />
-            </a>
-            <a href={SITE_CONFIG.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
-              <Linkedin size={18} />
-            </a>
-            <a href={SITE_CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
-              <Instagram size={18} />
-            </a>
+            {SITE_CONFIG.social.facebook && (
+              <a href={SITE_CONFIG.social.facebook} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook">
+                <Facebook size={18} />
+              </a>
+            )}
+            {SITE_CONFIG.social.linkedin && (
+              <a href={SITE_CONFIG.social.linkedin} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="LinkedIn">
+                <Linkedin size={18} />
+              </a>
+            )}
+            {SITE_CONFIG.social.instagram && (
+              <a href={SITE_CONFIG.social.instagram} target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="ADBPack on Instagram">
+                <Instagram size={18} />
+              </a>
+            )}
           </div>
         </div>
 
@@ -106,10 +125,13 @@ const Footer = () => {
           <ul className="footer-links">
             <li><Link to="/product/mono-cartons">Mono Cartons</Link></li>
             <li><Link to="/product/rigid-boxes">Rigid Boxes</Link></li>
-            <li><Link to="/product/self-adhesive-labels">Self Adhesive Labels</Link></li>
-            <li><Link to="/product/pouches">Flexible Pouches</Link></li>
-            <li><Link to="/product/promotional-tape-roll">Adhesive Tapes</Link></li>
             <li><Link to="/product/corrugated-boxes">Corrugated Boxes</Link></li>
+            <li><Link to="/product/pouches">Flexible Pouches</Link></li>
+            <li><Link to="/product/cold-seal-blisters">Cold Seal Blisters</Link></li>
+            <li><Link to="/product/hot-seal-blisters">Hot Seal Blisters</Link></li>
+            <li><Link to="/product/self-adhesive-labels">Self Adhesive Labels</Link></li>
+            <li><Link to="/product/canister-boxes">Canister Boxes</Link></li>
+            <li><Link to="/product/promotional-tape-roll">Promotional Tapes</Link></li>
           </ul>
         </div>
 

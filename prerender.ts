@@ -76,6 +76,29 @@ async function prerender() {
 
     console.log(`pre-rendered ${url}`);
   }
+
+  // Auto-generate sitemap.xml with today's lastmod date
+  const today = new Date().toISOString().split('T')[0];
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${routes
+  .map((url) => {
+    const loc = url === '/' ? 'https://adbpack.com/' : `https://adbpack.com${url}`;
+    const priority = url === '/' ? '1.0' : url === '/products' ? '0.9' : url.startsWith('/product/') ? '0.8' : '0.7';
+    const changefreq = url === '/' || url === '/products' ? 'weekly' : 'monthly';
+    return `  <url>
+    <loc>${loc}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>${changefreq}</changefreq>
+    <priority>${priority}</priority>
+  </url>`;
+  })
+  .join('\n')}
+</urlset>
+`;
+  await fs.writeFile(path.resolve(__dirname, 'public/sitemap.xml'), sitemapXml);
+  await fs.writeFile(path.resolve(__dirname, 'dist/sitemap.xml'), sitemapXml);
+  console.log('Generated sitemap.xml');
   console.log('Pre-rendering complete.');
 }
 

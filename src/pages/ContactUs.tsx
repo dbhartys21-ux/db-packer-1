@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, CheckCircle2, AlertCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { SITE_CONFIG } from '../config/site';
+import { organizationSchema, breadcrumbSchema } from '../config/schema';
 import { supabase } from '../utils/supabaseClient';
 import SEOHead from '../components/SEOHead';
 import './ContactUs.css';
@@ -31,8 +32,8 @@ const ContactUs = () => {
     }
     if (!formData.phone.trim()) {
       errors.phone = 'Phone is required';
-    } else if (!/^\+?[0-9\s-]{10,15}$/.test(formData.phone.replace(/[^0-9+]/g, ''))) {
-      errors.phone = 'Invalid phone number format';
+    } else if (!/^\+?[0-9\s-]{7,18}$/.test(formData.phone.replace(/[^0-9+]/g, ''))) {
+      errors.phone = 'Enter a valid phone / WhatsApp number';
     }
     if (!formData.interest) errors.interest = 'Please select your inquiry area';
     if (!formData.message.trim()) errors.message = 'Message cannot be empty';
@@ -88,16 +89,20 @@ const ContactUs = () => {
     }
   };
 
-  const phoneNumbers = SITE_CONFIG.contact.phone.split(',');
-  const primaryPhone = phoneNumbers[0].trim();
-
   return (
     <div className="contact-page-container">
       <SEOHead
-        title="Contact ADBPack — Get a Custom Packaging Quote | Delhi, India"
-        description="Contact ADBPack for custom packaging solutions. Get a free B2B quote for corrugated boxes, mono cartons, rigid boxes, pouches & more. Call +91 9711492120 or email info@adbpack.com."
+        title="Contact ADBPack — Custom Packaging Manufacturer & Exporter | New Delhi, India"
+        description="Contact ADBPack for custom B2B & export packaging quotes. Mono cartons, rigid boxes, corrugated boxes, pouches, blisters & labels. Call/WhatsApp +91 97114 92120 or +91 88825 67498, or email info@adbpack.com."
         canonicalPath="/contact"
-        keywords="contact packaging manufacturer, packaging quote Delhi, custom packaging inquiry, ADBPack contact, packaging manufacturer phone number"
+        keywords="contact packaging manufacturer India, custom packaging inquiry, export packaging supplier India, ADBPack contact, packaging manufacturer Delhi phone number"
+        schema={[
+          organizationSchema(),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Contact Us", path: "/contact" }
+          ])
+        ]}
       />
       <div className="page-breadcrumb">
         <Link to="/">Home</Link> &bull; Contact Us
@@ -166,10 +171,9 @@ const ContactUs = () => {
                       <div className="form-group">
                         <div className={`phone-input-group ${formErrors.phone ? 'input-error' : ''}`}>
                           <div className="country-code-select" aria-hidden="true">
-                            <span>🇮🇳</span>
-                            <span>&#8964;</span>
+                            <span>🌐</span>
                           </div>
-                          <label htmlFor="contact-phone" className="visually-hidden">Phone Number</label>
+                          <label htmlFor="contact-phone" className="visually-hidden">Phone or WhatsApp Number</label>
                           <input
                             type="tel"
                             id="contact-phone"
@@ -177,7 +181,7 @@ const ContactUs = () => {
                             value={formData.phone}
                             onChange={handleInputChange}
                             className="form-control phone-input"
-                            placeholder="+91 Phone number *"
+                            placeholder="Phone / WhatsApp (with country code) *"
                             required
                           />
                         </div>
@@ -263,16 +267,21 @@ const ContactUs = () => {
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <MapPin size={24} className="detail-icon" style={{ color: 'var(--primary-color)', flexShrink: 0, marginTop: '3px' }} />
                   <div>
-                    <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '5px', color: 'var(--text-color)' }}>Corporate Address</h4>
-                    <p style={{ fontSize: '0.92rem', color: 'var(--text-light)', margin: 0 }}>{SITE_CONFIG.contact.address}</p>
+                    <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '5px', color: 'var(--text-color)' }}>Manufacturing Location</h4>
+                    <p style={{ fontSize: '0.92rem', color: 'var(--text-light)', margin: 0 }}>{SITE_CONFIG.contact.address.join(' ')}</p>
                   </div>
                 </li>
                 <li style={{ display: 'flex', gap: '15px' }}>
                   <Phone size={24} className="detail-icon" style={{ color: 'var(--primary-color)', flexShrink: 0, marginTop: '3px' }} />
                   <div>
-                    <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '5px', color: 'var(--text-color)' }}>Phone &amp; Bulk Support</h4>
+                    <h4 style={{ fontSize: '1rem', fontWeight: '700', marginBottom: '5px', color: 'var(--text-color)' }}>Phone, WhatsApp &amp; Export Desk</h4>
                     <p style={{ fontSize: '0.92rem', color: 'var(--text-light)', margin: 0 }}>
-                      <a href={`tel:${primaryPhone}`}>{SITE_CONFIG.contact.phone}</a>
+                      {SITE_CONFIG.contact.phones.map((p, idx) => (
+                        <span key={p.e164}>
+                          {idx > 0 && ', '}
+                          <a href={`tel:${p.e164}`}>{p.display}</a>
+                        </span>
+                      ))}
                     </p>
                   </div>
                 </li>

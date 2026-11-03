@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '../config/site';
 
 interface SEOHeadProps {
   title: string;
@@ -8,6 +9,7 @@ interface SEOHeadProps {
   ogType?: string;
   keywords?: string;
   schema?: object | object[];
+  noindex?: boolean;
 }
 
 /**
@@ -22,9 +24,9 @@ const SEOHead = ({
   ogType = 'website',
   keywords,
   schema,
+  noindex = false,
 }: SEOHeadProps) => {
-  const siteUrl = 'https://adbpack.com';
-  const fullUrl = `${siteUrl}${canonicalPath}`;
+  const fullUrl = `${SITE_URL}${canonicalPath}`;
 
   // Support single schema or array of schemas
   const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
@@ -36,6 +38,12 @@ const SEOHead = ({
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={fullUrl} />
+      <meta
+        name="robots"
+        content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1'}
+      />
+      <link rel="alternate" hrefLang="en" href={fullUrl} />
+      <link rel="alternate" hrefLang="x-default" href={fullUrl} />
 
       {/* Open Graph */}
       <meta property="og:type" content={ogType} />

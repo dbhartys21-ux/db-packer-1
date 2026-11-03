@@ -5,6 +5,8 @@ import { ArrowRight, Search, SlidersHorizontal } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MobileImageSlider from '../components/MobileImageSlider';
 import SEOHead from '../components/SEOHead';
+import { SITE_URL, ORG_ID } from '../config/site';
+import { breadcrumbSchema } from '../config/schema';
 import './Products.css';
 
 const Products = () => {
@@ -34,10 +36,36 @@ const Products = () => {
   return (
     <div className="products-page-container">
       <SEOHead
-        title="All Packaging Products — Boxes, Cartons, Pouches, Labels & More | ADBPack"
-        description="Browse ADBPack's complete packaging catalog. Custom corrugated boxes, mono cartons, rigid boxes, pouches, blister packaging, self-adhesive labels, canister boxes & branded tape. Wholesale B2B pricing."
+        title="Custom Packaging Products Catalog — Cartons, Rigid Boxes, Pouches & Labels | ADBPack India"
+        description="Browse ADBPack's B2B & export packaging catalog: custom mono cartons, luxury rigid boxes, corrugated boxes, stand-up pouches, cold/hot seal blisters, self-adhesive labels, paper canisters & branded tapes."
         canonicalPath="/products"
-        keywords="packaging products India, wholesale packaging, custom packaging boxes, B2B packaging catalog, packaging manufacturer products, corrugated boxes, mono cartons, rigid boxes, pouches, blister packaging"
+        keywords="packaging products India, custom packaging catalog, wholesale packaging manufacturer India, mono cartons, rigid boxes, corrugated boxes, stand up pouches, blister cards, self adhesive labels, paper canisters"
+        schema={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "name": "ADBPack Custom Packaging Products Catalog",
+            "itemListElement": products.map((p, idx) => ({
+              "@type": "ListItem",
+              "position": idx + 1,
+              "url": `${SITE_URL}/product/${p.id}`,
+              "name": p.title,
+              "item": {
+                "@type": "Product",
+                "name": p.title,
+                "url": `${SITE_URL}/product/${p.id}`,
+                "image": `${SITE_URL}${p.img}`,
+                "description": p.fullDesc,
+                "brand": { "@type": "Brand", "name": "ADBPack" },
+                "manufacturer": { "@id": ORG_ID }
+              }
+            }))
+          },
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Products", path: "/products" }
+          ])
+        ]}
       />
       {/* Hero Banner */}
       <section className="products-hero" aria-label="Catalog Hero">
